@@ -1,0 +1,25 @@
+@import url(./common.css);
+
+.index_top{display: flex;}
+.index_top .index_silder{flex: 800px;max-width: 800px;}
+.index_top .index_rank{flex: 1;margin-left: 20px;}
+.index_top .index_rank .title{font-size: 1.5rem;margin-bottom: 10px;}
+.index_top .index_rank ul{padding-left: 0;margin-bottom: 0;list-style: none;}
+.index_top .index_rank ul li{padding-bottom: 10px;border-bottom: 1px solid #ccc;margin-bottom: 10px;}
+.index_top .index_rank ul li:last-child{margin-bottom: 0;}
+.index_top .index_rank ul li a{display: flex;align-items: flex-start;color: #333;text-decoration: none;}
+.index_top .index_rank ul li a label{font-size: 1.75rem;font-style: italic;margin-bottom: 0;margin-right: 10px;}
+
+
+.index_recommend{max-width: 800px;}
+.index_recommend .recommend_item{margin-bottom: 20px;}
+.index_recommend .recommend_item .title{display: flex;align-items: flex-end;margin-bottom: 10px;}
+.index_recommend .recommend_item .title label{margin-bottom: 0;margin-right: 10px;font-size: 2rem;}
+.index_recommend .recommend_item .title a{font-size: 1.25rem}
+.index_recommend .recommend_item .title span{margin-left: auto;font-size: 1.25rem;}
+
+.index_recommend .recommend_item .recommend_slider .item .img{padding-bottom: 69%;background-size: cover;background-position: center;border-radius: 10px;margin-bottom: 10px;}
+.index_recommend .recommend_item .recommend_slider .item .name a{color: #333;}
+.index_recommend .recommend_item .recommend_slider .item .author a{color: #333;}
+
+

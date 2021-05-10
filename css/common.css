@@ -1,0 +1,40 @@
+html{font-size: 16px;}
+body{
+    margin: 0;
+}
+
+header .top{display: flex;justify-content: space-between;align-items: center;}
+header .top .logo{flex: 0 0 230px;}
+header .top .logo img{width: 100%;}
+
+header .top .search{flex: 1;max-width: 700px;}
+header .top .search form{display: flex;margin-bottom: 10px;}
+header .top .search form input[type='text']{flex: 1;}
+header .top .search form button{background-color: #087A7A;color: #fff;outline: none;border: 1px solid #087A7A;}
+header .top .search form button:hover{opacity: .8;}
+header .top .search ul.tags{padding-left: 0;margin-bottom: 0;list-style: none;display: flex;}
+header .top .search ul.tags li{margin-right: 10px;}
+header .top .search ul.tags li:last-child{margin-right: 0;}
+header .top .search ul.tags li a{color: #333;text-decoration: none;}
+header .top .search ul.tags li a:hover{opacity: .8;}
+
+header .top ul.head_right{padding-left: 0;margin-bottom: 0;display: flex;list-style: none;}
+header .top ul.head_right li{margin-right: 10px;}
+header .top ul.head_right li a{color: #333;text-decoration: none;}
+header .top ul.head_right li a:hover{opacity: .8;}
+header .top ul.head_right li:nth-child(2) a{padding: 5px 12px;color: #fff;background-color: #087A7A;border-radius: 5px;}
+
+header .bottom{background-color: #087A7A;}
+header .bottom ul.nav{display: flex;padding-left: 0;margin-bottom: 0;}
+header .bottom ul.nav > li{position: relative;}
+header .bottom ul.nav > li > a{display:block;padding: 16px;color: #fff;text-decoration: none;}
+header .bottom ul.nav > li > a:hover{opacity: .8;}
+header .bottom ul.nav > li > ul.sub_menu{position: absolute;top: 100%;left:0;width:100%;padding-left: 0;margin-bottom: 0;list-style: none;transform: scaleY(0);transform-origin: top;transition-duration: .3s;background-color: #eee;box-shadow: 5px 5px 10px #00000047;padding: 5px 0;}
+header .bottom ul.nav > li:hover > ul.sub_menu{transform: scaleY(1);}
+header .bottom ul.nav > li > ul.sub_menu > li{text-align: center;padding: 10px 0;}
+header .bottom ul.nav > li > ul.sub_menu > li > a{color: #333;text-decoration: none;}
+header .bottom ul.nav > li > ul.sub_menu > li > a:hover{opacity: .8;}
+
+
+
+
