@@ -1,0 +1,60 @@
+@import url(./common.css);
+
+.products .title {
+  color: #665e5c;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.products .list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.products .list .item {
+  flex: 0 0 33.3%;
+  margin-bottom: 30px;
+  padding: 0 15px;
+}
+.products .list .item:first-child {
+  display: flex;
+  flex: 0 0 100%;
+}
+.products .list .item .img {
+  width: 100%;
+  padding-bottom: 55%;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 15px;
+}
+.products .list .item:first-child .img {
+  flex: 0 0 740px;
+  padding-bottom: 0;
+  margin-right: 30px;
+  margin-bottom: 0;
+}
+.products .list .item .name {
+  margin-bottom: 20px;
+}
+.products .list .item .name a {
+  font-size: 1.5rem;
+  color: #000;
+  font-weight: 700;
+  display: block;
+  text-decoration: none;
+}
+.products .list .item .name a:hover {
+  opacity: 0.8;
+}
+.products .list .item .desc {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.products .list .item .author a {
+  color: #333;
+}
+.products .list .item .author a:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
