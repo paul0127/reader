@@ -3,6 +3,7 @@ html {
 }
 body {
   margin: 0;
+  position: relative;
 }
 
 header .top {
@@ -30,10 +31,15 @@ header .top .search {
 }
 header .top .search form {
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 header .top .search form input[type='text'] {
   flex: 1;
+  outline: none;
+  margin-right: 10px;
+  border-radius: 20px;
+  border: 1px solid #333;
+  padding: 3px 10px;
 }
 header .top .search form button {
   background-color: #087a7a;
@@ -45,18 +51,20 @@ header .top .search form button:hover {
   opacity: 0.8;
 }
 header .top .search ul.tags {
-  padding-left: 0;
+  padding-left: 10px;
   margin-bottom: 0;
   list-style: none;
   display: flex;
 }
 header .top .search ul.tags li {
   margin-right: 10px;
+  line-height: 1;
 }
 header .top .search ul.tags li:last-child {
   margin-right: 0;
 }
 header .top .search ul.tags li a {
+  font-size: 0.9rem;
   color: #333;
   text-decoration: none;
 }
@@ -120,12 +128,12 @@ header .bottom ul.nav > li > a:hover {
 header .bottom ul.nav > li > ul.sub_menu {
   position: absolute;
   top: 100%;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  width: 120%;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
-  transform: scaleY(0);
+  transform: scaleY(0) translateX(-50%);
   transform-origin: top;
   transition-duration: 0.3s;
   background-color: #eee;
@@ -134,13 +142,14 @@ header .bottom ul.nav > li > ul.sub_menu {
   z-index: 2;
 }
 header .bottom ul.nav > li:hover > ul.sub_menu {
-  transform: scaleY(1);
+  transform: scaleY(1) translateX(-50%);
 }
 header .bottom ul.nav > li > ul.sub_menu > li {
   text-align: center;
-  padding: 10px 0;
+  padding: 10px 10px;
 }
 header .bottom ul.nav > li > ul.sub_menu > li > a {
+  display: block;
   color: #333;
   text-decoration: none;
 }
@@ -199,15 +208,17 @@ header .bottom ul.nav > li > ul.sub_menu > li > a:hover {
   }
   header .bottom ul.nav > li > ul.sub_menu li {
     text-align: left;
-    padding: 16px;
+    padding: 10px 16px;
   }
   header .bottom.active ul.nav > li > a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 16px;
   }
   header .bottom.active ul.nav > li > a::after {
-    content: '＞';
+    font-size: 1.75rem;
+    content: '›';
     transform: rotate(90deg);
   }
   header .bottom.active ul.nav > li.active > a::after {
@@ -232,6 +243,9 @@ header .bottom ul.nav > li > ul.sub_menu > li > a:hover {
   display: flex;
 }
 @media (max-width: 1200px) {
+  .page {
+    padding-top: 0;
+  }
   .page_frame {
     display: block;
   }
@@ -334,4 +348,189 @@ ul.bread li a {
   .right_menu {
     display: none;
   }
+}
+
+/*彈出登入窗*/
+.login_popup_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+.login_popup_bg.active {
+  display: block;
+}
+.login_popup_bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 998;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+.login_popup_bg .login_popup {
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  max-width: 800px;
+}
+.login_popup_bg .login_popup .close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+}
+.login_popup_bg .login_popup .left {
+  flex: 0 0 50%;
+}
+.login_popup_bg .login_popup .left img {
+  width: 100%;
+}
+.login_popup_bg .login_popup .right {
+  flex: 0 0 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login_popup_bg .login_popup .right .con {
+  width: 300px;
+}
+.login_popup_bg .login_popup .right .con h1 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.login_popup_bg .login_popup .right .con h3 {
+  font-size: 1rem;
+  text-align: center;
+}
+.login_popup_bg .login_popup .right .con .social_login {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+.login_popup_bg .login_popup .right .con .social_login .fb_btn {
+  flex: 0 0 140px;
+  background-color: rgb(69, 104, 178);
+  color: #fff;
+  text-align: center;
+  margin-right: 10px;
+  padding: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.login_popup_bg .login_popup .right .con .social_login .google_btn {
+  flex: 0 0 140px;
+  border: 1px solid #a09a99;
+  color: #a09a99;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.login_popup_bg .login_popup .right .con .input_group {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.login_popup_bg .login_popup .right .con .input_group span.hr {
+  display: block;
+  margin: 10px 0;
+  text-align: center;
+}
+.login_popup_bg .login_popup .right .con .input_group .input {
+  flex: 0 0 100%;
+  margin-bottom: 12px;
+}
+.login_popup_bg .login_popup .right .con .input_group .input:last-child {
+  margin-bottom: 0;
+}
+.login_popup_bg .login_popup .right .con .input_group .input input[type='text'],
+.login_popup_bg
+  .login_popup
+  .right
+  .con
+  .input_group
+  .input
+  input[type='password'] {
+  width: 100%;
+  outline: none;
+  border: 1px solid #a09a99;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 0.9rem;
+}
+.login_popup_bg
+  .login_popup
+  .right
+  .con
+  .input_group
+  .input
+  input[type='text']:focus,
+.login_popup_bg
+  .login_popup
+  .right
+  .con
+  .input_group
+  .input
+  input[type='password']:focus {
+  border: 1px solid #333;
+}
+.login_popup_bg .login_popup .right .con .forget_btn {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.login_popup_bg .login_popup .right .con .forget_btn a {
+  color: #ff485a;
+  font-size: 0.75rem;
+}
+.login_popup_bg .login_popup .right .con .send_btn {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+.login_popup_bg .login_popup .right .con .send_btn button {
+  width: 100%;
+  background-color: #ff485a;
+  color: #fff;
+  border: none;
+  padding: 8px 0;
+}
+.login_popup_bg .login_popup .right .con .send_btn button:hover {
+  opacity: 0.8;
+}
+.login_popup_bg .login_popup .right .con .regist_btn {
+  font-size: 0.75rem;
+  text-align: center;
+}
+.login_popup_bg .login_popup .right .con .regist_btn a {
+  color: #ff485a;
+  margin-left: 5px;
+}
+.login_popup_bg .login_popup .bottom {
+  flex: 0 0 100%;
+  padding: 5px 10px;
+  border-top: 1px solid #dee2e6;
+}
+.login_popup_bg .login_popup .bottom ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  margin-bottom: 0;
+}
+.login_popup_bg .login_popup .bottom ul li {
+  margin-right: 10px;
+}
+.login_popup_bg .login_popup .bottom ul li a {
+  color: #333;
+  font-size: 0.75rem;
 }

@@ -58,3 +58,17 @@
   opacity: 0.8;
   text-decoration: none;
 }
+
+@media (max-width: 1200px) {
+  .products .list .item {
+    flex: 0 0 100%;
+  }
+  .products .list .item:first-child {
+    display: block;
+  }
+  .products .list .item:first-child .img {
+    width: 100%;
+    padding-bottom: 55%;
+    margin-bottom: 15px;
+  }
+}

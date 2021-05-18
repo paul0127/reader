@@ -190,6 +190,9 @@
   .index_recommend .recommend_item {
     width: 100%;
   }
+  .index_recommend .recommend_item .title label{
+    font-size: 1.5rem;
+  }
   .index_recommend .recommend_item .recommend_slider {
     width: 100%;
   }
