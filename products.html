@@ -15,14 +15,14 @@
     <link rel="stylesheet" href="./css/products.css" />
   </head>
   <body>
-    <div class="login_popup_bg">
-      <div class="login_popup">
+    <div class="popup_bg">
+      <div class="popup">
         <div class="close"><i class="fas fa-times"></i></div>
         <div class="left">
           <img src="./images/common/login_left_img.jpg" alt="" />
         </div>
         <div class="right">
-          <div class="con">
+          <div class="con login_panel">
             <h1>歡迎使用線上閱讀平台</h1>
             <h3>自由創作，享受好內容</h3>
             <div class="social_login">
@@ -42,7 +42,44 @@
             <div class="send_btn">
               <button>登入</button>
             </div>
-            <div class="regist_btn">還沒有帳號嗎？<a href="#">註冊 </a></div>
+            <div class="account_btn">
+              還沒有帳號嗎？<span class="to_regist">註冊 </span>
+            </div>
+          </div>
+          <div class="con regist_panel">
+            <h1>歡迎使用線上閱讀平台</h1>
+            <h3>自由創作，享受好內容</h3>
+            <div class="social_login">
+              <div class="fb_btn">使用Faacebook</div>
+              <div class="google_btn">使用Google</div>
+            </div>
+            <div class="input_group">
+              <span class="hr">或</span>
+              <div class="input">
+                <input type="text" placeholder="請輸入暱稱" />
+              </div>
+              <div class="input">
+                <input type="text" placeholder="電子郵件" />
+              </div>
+              <div class="input">
+                <input type="password" placeholder="設定密碼" />
+              </div>
+              <div class="input">
+                <input type="password" placeholder="確認密碼" />
+              </div>
+            </div>
+            <div class="check">
+              <input type="checkbox" name="" id="check_regist" />
+              <label for="check_regist"
+                >我同意 <a href="#" target="_blank">會員服務條款</a></label
+              >
+            </div>
+            <div class="send_btn">
+              <button>註冊</button>
+            </div>
+            <div class="account_btn">
+              我已有帳號<span class="to_login">登入 </span>
+            </div>
           </div>
         </div>
         <div class="bottom">
@@ -76,7 +113,7 @@
           </div>
           <ul class="head_right">
             <li><a href="#" class="login_btn">登入</a></li>
-            <li><a href="#">註冊</a></li>
+            <li><a href="#" class="regist_btn">註冊</a></li>
           </ul>
         </div>
       </div>
@@ -316,6 +353,11 @@
         </div>
       </div>
     </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.18/vue.js"
+      integrity="sha512-vAl/vSCnL+gHF3h2bGnUOWs0tlJCd6T0SoWoKrMrE9dQmLEBVnYP5celRncFwGQXdWfK0mZMo/zAX5dZRG53Ow=="
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

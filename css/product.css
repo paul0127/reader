@@ -16,6 +16,9 @@
   flex: 0 0 350px;
   margin-right: 20px;
 }
+.product .top .main_pic img {
+  width: 100%;
+}
 .product .top .main_pic .pic {
   width: 100%;
   background-position: center;
@@ -39,7 +42,9 @@
 .product .top .text .info .name .like {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   margin-top: 10px;
+  font-size: 1.25rem;
 }
 .product .top .text .info .name .like span {
   display: flex;
@@ -47,11 +52,13 @@
 }
 .product .top .text .info .name .like span::before {
   content: url(../images/common/like.svg);
-  width: 28px;
-  height: 36px;
+  width: 24px;
+  height: 22px;
   margin-right: 10px;
+  margin-top: 3px;
 }
-.product .top .text .info .name .like span.active::before,.product .top .text .info .name .like span:hover::before {
+.product .top .text .info .name .like span.active::before,
+.product .top .text .info .name .like span:hover::before {
   content: url(../images/common/like_active.svg);
 }
 .product .top .text .info .author {
@@ -121,8 +128,7 @@
   margin-right: 0;
 }
 
-.product .main {
-}
+
 .product .main .title {
   border-bottom: 2px solid #333;
 }

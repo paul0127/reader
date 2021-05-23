@@ -199,9 +199,15 @@ header .bottom ul.nav > li > ul.sub_menu > li > a:hover {
 
   header .bottom ul.nav > li > ul.sub_menu {
     position: relative;
-    transform: scaleY(1);
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: scaleY(1) translateX(0);
     box-shadow: unset;
     display: none;
+  }
+  header .bottom ul.nav > li:hover > ul.sub_menu {
+    transform: scaleY(1) translateX(0);
   }
   header .bottom ul.nav > li.active > ul.sub_menu {
     display: block;
@@ -216,7 +222,7 @@ header .bottom ul.nav > li > ul.sub_menu > li > a:hover {
     align-items: center;
     padding: 10px 16px;
   }
-  header .bottom.active ul.nav > li > a::after {
+  header .bottom.active ul.nav > li.sub > a::after {
     font-size: 1.75rem;
     content: '›';
     transform: rotate(90deg);
@@ -237,7 +243,7 @@ header .bottom ul.nav > li > ul.sub_menu > li > a:hover {
 /*頁面框架*/
 .page {
   background-color: #f9f7f5;
-  padding-top: 40px;
+  padding: 40px 0;
 }
 .page_frame {
   display: flex;
@@ -350,8 +356,8 @@ ul.bread li a {
   }
 }
 
-/*彈出登入窗*/
-.login_popup_bg {
+/*彈出登入、註冊窗*/
+.popup_bg {
   position: fixed;
   top: 0;
   left: 0;
@@ -360,10 +366,10 @@ ul.bread li a {
   height: 100vh;
   display: none;
 }
-.login_popup_bg.active {
+.popup_bg.active {
   display: block;
 }
-.login_popup_bg::before {
+.popup_bg::before {
   content: '';
   position: absolute;
   top: 0;
@@ -375,7 +381,7 @@ ul.bread li a {
   opacity: 0.5;
 }
 
-.login_popup_bg .login_popup {
+.popup_bg .popup {
   position: absolute;
   z-index: 999;
   top: 50%;
@@ -386,43 +392,51 @@ ul.bread li a {
   background-color: #fff;
   max-width: 800px;
 }
-.login_popup_bg .login_popup .close {
+.popup_bg .popup .close {
   position: absolute;
-  right: 15px;
-  top: 15px;
+  right: 10px;
+  top: 10px;
   cursor: pointer;
 }
-.login_popup_bg .login_popup .left {
+.popup_bg .popup .left {
   flex: 0 0 50%;
 }
-.login_popup_bg .login_popup .left img {
+.popup_bg .popup .left img {
   width: 100%;
 }
-.login_popup_bg .login_popup .right {
+.popup_bg .popup .right {
   flex: 0 0 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 40px 20px;
+  height: 513px;
+  overflow-y: auto;
 }
-.login_popup_bg .login_popup .right .con {
+.popup_bg .popup .right::-webkit-scrollbar {
+  width: 5px;
+}
+.popup_bg .popup .right .con {
   width: 300px;
+  display: none;
+  margin: auto;
 }
-.login_popup_bg .login_popup .right .con h1 {
+.popup_bg .popup .right .con.active {
+  display: block;
+}
+.popup_bg .popup .right .con h1 {
   font-size: 1.5rem;
   text-align: center;
 }
-.login_popup_bg .login_popup .right .con h3 {
+.popup_bg .popup .right .con h3 {
   font-size: 1rem;
   text-align: center;
 }
-.login_popup_bg .login_popup .right .con .social_login {
+.popup_bg .popup .right .con .social_login {
   display: flex;
   justify-content: center;
   margin: 20px 0;
 }
-.login_popup_bg .login_popup .right .con .social_login .fb_btn {
+.popup_bg .popup .right .con .social_login .fb_btn {
   flex: 0 0 140px;
-  background-color: rgb(69, 104, 178);
+  background-color: #4568b2;
   color: #fff;
   text-align: center;
   margin-right: 10px;
@@ -430,7 +444,10 @@ ul.bread li a {
   font-size: 0.9rem;
   cursor: pointer;
 }
-.login_popup_bg .login_popup .right .con .social_login .google_btn {
+.popup_bg .popup .right .con .social_login .fb_btn:hover {
+  opacity: 0.8;
+}
+.popup_bg .popup .right .con .social_login .google_btn {
   flex: 0 0 140px;
   border: 1px solid #a09a99;
   color: #a09a99;
@@ -439,30 +456,27 @@ ul.bread li a {
   font-size: 0.9rem;
   cursor: pointer;
 }
-.login_popup_bg .login_popup .right .con .input_group {
+.popup_bg .popup .right .con .social_login .google_btn:hover {
+  opacity: 0.8;
+}
+.popup_bg .popup .right .con .input_group {
   width: 100%;
   margin-bottom: 15px;
 }
-.login_popup_bg .login_popup .right .con .input_group span.hr {
+.popup_bg .popup .right .con .input_group span.hr {
   display: block;
   margin: 10px 0;
   text-align: center;
 }
-.login_popup_bg .login_popup .right .con .input_group .input {
+.popup_bg .popup .right .con .input_group .input {
   flex: 0 0 100%;
   margin-bottom: 12px;
 }
-.login_popup_bg .login_popup .right .con .input_group .input:last-child {
+.popup_bg .popup .right .con .input_group .input:last-child {
   margin-bottom: 0;
 }
-.login_popup_bg .login_popup .right .con .input_group .input input[type='text'],
-.login_popup_bg
-  .login_popup
-  .right
-  .con
-  .input_group
-  .input
-  input[type='password'] {
+.popup_bg .popup .right .con .input_group .input input[type='text'],
+.popup_bg .popup .right .con .input_group .input input[type='password'] {
   width: 100%;
   outline: none;
   border: 1px solid #a09a99;
@@ -470,67 +484,83 @@ ul.bread li a {
   border-radius: 3px;
   font-size: 0.9rem;
 }
-.login_popup_bg
-  .login_popup
-  .right
-  .con
-  .input_group
-  .input
-  input[type='text']:focus,
-.login_popup_bg
-  .login_popup
-  .right
-  .con
-  .input_group
-  .input
-  input[type='password']:focus {
-  border: 1px solid #333;
+.popup_bg .popup .right .con .input_group .input input[type='text']:focus,
+.popup_bg .popup .right .con .input_group .input input[type='password']:focus {
+  border-color: #4568b2;
+  box-shadow: 0 0 4px #4568b2;
 }
-.login_popup_bg .login_popup .right .con .forget_btn {
+.popup_bg .popup .right .con .forget_btn {
   width: 100%;
   margin-bottom: 15px;
 }
-.login_popup_bg .login_popup .right .con .forget_btn a {
+.popup_bg .popup .right .con .forget_btn a {
   color: #ff485a;
   font-size: 0.75rem;
 }
-.login_popup_bg .login_popup .right .con .send_btn {
+.popup_bg .popup .right .con .check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.popup_bg .popup .right .con .check label {
+  margin-bottom: 0;
+  margin-left: 5px;
+  font-size: 0.9rem;
+}
+.popup_bg .popup .right .con .check label a {
+  color: #ff485a;
+}
+.popup_bg .popup .right .con .send_btn {
   font-size: 1rem;
   margin-bottom: 15px;
 }
-.login_popup_bg .login_popup .right .con .send_btn button {
+.popup_bg .popup .right .con .send_btn button {
   width: 100%;
   background-color: #ff485a;
   color: #fff;
   border: none;
   padding: 8px 0;
 }
-.login_popup_bg .login_popup .right .con .send_btn button:hover {
+.popup_bg .popup .right .con .send_btn button:hover {
   opacity: 0.8;
 }
-.login_popup_bg .login_popup .right .con .regist_btn {
+.popup_bg .popup .right .con .account_btn {
   font-size: 0.75rem;
   text-align: center;
 }
-.login_popup_bg .login_popup .right .con .regist_btn a {
+.popup_bg .popup .right .con .account_btn span {
   color: #ff485a;
   margin-left: 5px;
+  cursor: pointer;
 }
-.login_popup_bg .login_popup .bottom {
+.popup_bg .popup .right .con .account_btn span:hover {
+  text-decoration: underline;
+}
+.popup_bg .popup .bottom {
   flex: 0 0 100%;
   padding: 5px 10px;
   border-top: 1px solid #dee2e6;
 }
-.login_popup_bg .login_popup .bottom ul {
+.popup_bg .popup .bottom ul {
   list-style: none;
   padding-left: 0;
   display: flex;
   margin-bottom: 0;
 }
-.login_popup_bg .login_popup .bottom ul li {
+.popup_bg .popup .bottom ul li {
   margin-right: 10px;
 }
-.login_popup_bg .login_popup .bottom ul li a {
+.popup_bg .popup .bottom ul li a {
   color: #333;
   font-size: 0.75rem;
+}
+@media (max-width: 1200px) {
+  .popup_bg .popup .left {
+    display: none;
+  }
+  .popup_bg .popup .right {
+    flex: 0 0 100%;
+    padding: 30px 20px;
+    height: 450px;
+  }
 }

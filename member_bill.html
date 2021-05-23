@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>產品清單</title>
+    <title>帳單</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./offset/fontawesome/css/all.min.css" />
-    <link rel="stylesheet" href="./css/product.css" />
+    <link rel="stylesheet" href="./css/member_index.css" />
   </head>
   <body>
     <div class="popup_bg">
@@ -177,111 +177,94 @@
     </header>
 
     <div class="page">
-      <!--<div class="top_banner">
-        <img src="./images/common/top_banner.png" alt="" />
-      </div>-->
-
       <div class="container">
         <ul class="bread">
           <li><a href="">首頁</a></li>
-          <li><a href="">科技與3C</a></li>
-          <li>不要讓未來的你，討厭現在的自己</li>
+          <li>會員專區</li>
+          <li>個人資料</li>
         </ul>
-        <div class="page_frame">
-          <div class="product" id="app">
-            <div class="top">
-              <div class="main_pic">
-                <img src="./images/product/pic_01.png" alt="" />
-              </div>
-              <div class="text">
-                <div class="info">
-                  <div class="name">
-                    TTA CORPORATE MEMBER MONTHL-創業家投資人簡志宇先生
-                    <div class="like">
-                      <span><font>加入收藏</font></span>
-                    </div>
-                  </div>
-
-                  <div class="author">
-                    <label for="">作者：</label><a href="#">簡志宇先生</a>
-                  </div>
-                  <div class="public_date">
-                    <label for="">出版日期：</label>2021/05/20
-                  </div>
-                  <div class="lang"><label for="">語言：</label>繁體中文</div>
-                </div>
-                <div class="download"><span @click="download()">點擊下載</span></div>
-              </div>
-              <div class="tags">
-                <label for="">標籤</label>
-                <ul>
-                  <li><a href="#">#3C</a></li>
-                  <li><a href="#">#科技</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="main">
-              <div class="title"><span>內容簡介</span></div>
-              <div class="editor">
-                Message from<br />
-                TTA Partnership Director<br />
-                TTA Eco Insight.<br />
-                TTA Co-Creation Platform<br />
-                TTA Startups of the Month<br />
-                Explore Innovation with<br />
-                TTA Corporate Partners.<br />
-                <br /><br />
-                TaiwanTech
-                Arena(TA)是為我國新創對接加速器、企業合作、資金投資、國際市場各面向的整合性台回顧2020年,TTA針對國內企業的不同產業、地區協會、國際企業、新創社群合作了各類對接活動之後,TTA新創生態系統的各產業企業、協會、國際企業、新創社群也都建立並落實與TTA新創生態系、新創企業對接交流的模式。
-              </div>
-            </div>
-          </div>
-          <div class="right_menu">
-            <div class="title">主題專區</div>
+        <div class="member_index">
+          <div class="mobile_left_menu">
+            <div class="selected">帳單</div>
             <ul>
               <li>
-                <a href="#"
-                  ><img src="./images/common/right_pic.png" alt=""
-                /></a>
+                <a href="./member_account.html">個人資料</a>
               </li>
               <li>
-                <a href="#"
-                  ><img src="./images/common/right_pic.png" alt=""
-                /></a>
+                <a href="./member_plan.html">方案</a>
               </li>
               <li>
-                <a href="#"
-                  ><img src="./images/common/right_pic.png" alt=""
-                /></a>
+                <a href="./member_history.html">購買紀錄</a>
               </li>
               <li>
-                <a href="#"
-                  ><img src="./images/common/right_pic.png" alt=""
-                /></a>
+                <a href="./member_download.html">下載紀錄</a>
+              </li>
+              <li>
+                <a href="./member_collect.html">收藏書籍</a>
+              </li>
+              <li>
+                <a href="./member_author.html">追蹤作者</a>
               </li>
             </ul>
+          </div>
+          <div class="top_title">
+            歡迎你! XXX會員 目前剩下餘額點數 1,000點 <button>登出</button>
+          </div>
+          <div class="main">
+            <div class="left_menu">
+              <div class="title">我的帳號</div>
+              <ul>
+                <li>
+                  <a href="./member_account.html"
+                    ><i class="fas fa-user"></i>個人資料</a
+                  >
+                </li>
+                <li>
+                  <a href="./member_plan.html"
+                    ><i class="far fa-list-alt"></i>方案</a
+                  >
+                </li>
+                <li>
+                  <a href="./member_bill.html"
+                    ><i class="fas fa-money-bill"></i>帳單</a
+                  >
+                </li>
+                <li>
+                  <a href="./member_history.html"
+                    ><i class="fas fa-history"></i>購買紀錄</a
+                  >
+                </li>
+                <li>
+                  <a href="./member_download.html"
+                    ><i class="fas fa-download"></i>下載紀錄</a
+                  >
+                </li>
+                <li>
+                  <a href="./member_collect.html"
+                    ><i class="fas fa-bookmark"></i>收藏書籍</a
+                  >
+                </li>
+                <li>
+                  <a href="./member_author.html"
+                    ><i class="fas fa-user-edit"></i>追蹤作者</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="right_panel">
+              <div class="title">方案</div>
+              <div class="s_title">使用者詳細資料</div>
+              <form></form>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.18/vue.js"
-      integrity="sha512-vAl/vSCnL+gHF3h2bGnUOWs0tlJCd6T0SoWoKrMrE9dQmLEBVnYP5celRncFwGQXdWfK0mZMo/zAX5dZRG53Ow=="
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
+      integrity="sha512-k2WPPrSgRFI6cTaHHhJdc8kAXaRM4JBFEDo1pPGGlYiOyv4vnA0Pp0G5XMYYxgAPmtmv/IIaQA6n5fLAyJaFMA=="
       crossorigin="anonymous"
     ></script>
     <script src="./js/main.js"></script>
-    <script>
-      let app = new Vue({
-        el: '#app',
-        data() {
-          return {}
-        },
-        methods: {
-          download() {
-            window.open('./uploads/pdf/pdf1.pdf', '_blank');
-          },
-        },
-      })
-    </script>
   </body>
 </html>
