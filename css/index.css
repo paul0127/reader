@@ -164,6 +164,7 @@
   background-position: center;
   background-size: cover;
   border-radius: 100%;
+  border: 1px solid #ccc;
   margin-right: 10px;
 }
 .index_recommend .recommend_item .recommend_slider .item .author a:hover {

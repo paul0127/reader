@@ -47,6 +47,7 @@ header .top .search form input[type='text'] {
 header .top .search form button {
   background-color: #087a7a;
   color: #fff;
+  padding: 0 10px;
   outline: none;
   border: 1px solid #087a7a;
 }
@@ -246,7 +247,7 @@ header .bottom ul.nav > li > ul.sub_menu > li > a:hover {
 /*頁面框架*/
 .page {
   background-color: #f9f7f5;
-  padding: 40px 0;
+  padding: 20px 0;
 }
 .page_frame {
   display: flex;
