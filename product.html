@@ -100,7 +100,7 @@
             ><img src="./images/common/logo.png" alt=""
           /></a>
           <div class="search_btn">
-            <img src="./images/common/icon-search.png" alt="" />
+            <i class="fas fa-search"></i>
           </div>
           <div class="search">
             <form><input type="text" /><button>搜尋</button></form>
@@ -210,7 +210,9 @@
                   </div>
                   <div class="lang"><label for="">語言：</label>繁體中文</div>
                 </div>
-                <div class="download"><span @click="download()">點擊下載</span></div>
+                <div class="download">
+                  <span @click="download()">點擊下載</span>
+                </div>
               </div>
               <div class="tags">
                 <label for="">標籤</label>
@@ -278,7 +280,7 @@
         },
         methods: {
           download() {
-            window.open('./uploads/pdf/pdf1.pdf', '_blank');
+            window.open('./uploads/pdf/pdf1.pdf', '_blank')
           },
         },
       })

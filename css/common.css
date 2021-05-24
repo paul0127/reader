@@ -25,6 +25,9 @@ header .top .search_btn {
   cursor: pointer;
   display: none;
 }
+header .top .search_btn i {
+  color: #333;
+}
 header .top .search {
   flex: 1;
   max-width: 600px;
