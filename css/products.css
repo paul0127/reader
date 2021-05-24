@@ -53,12 +53,21 @@
 }
 .products .list .item .author a {
   color: #333;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 .products .list .item .author a:hover {
   opacity: 0.8;
-  text-decoration: none;
 }
-
+.products .list .item .author a span {
+  width: 30px;
+  height: 30px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 100%;
+  margin-right: 10px;
+}
 @media (max-width: 1200px) {
   .products .list .item {
     flex: 0 0 100%;

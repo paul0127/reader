@@ -329,6 +329,7 @@ ul.bread li a {
   font-size: 1.75rem;
   margin-bottom: 15px;
   line-height: 1;
+  font-weight: 700;
 }
 .right_menu ul {
   padding-left: 0;

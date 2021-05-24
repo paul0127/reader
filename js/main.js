@@ -70,13 +70,11 @@ document.addEventListener('click', (e) => {
 
 let member_login = document.querySelector('.login_panel .send_btn button')
 member_login.addEventListener('click', () => {
-  location.href = '../member_account.html'
+  location.href = './member_account.html'
 })
 
 let mobile_left_menu = document.querySelector('.mobile_left_menu')
-let mobile_left_menu_btn = mobile_left_menu.querySelector('.selected')
-let mobile_left_menu_toggle = mobile_left_menu.querySelector('ul')
-let mobile_left_menu_height = $('.mobile_left_menu ul').height()
+let mobile_left_menu_btn = document.querySelector('.mobile_left_menu .selected')
 
 if (mobile_left_menu) {
   mobile_left_menu_btn.addEventListener('click', () => {
