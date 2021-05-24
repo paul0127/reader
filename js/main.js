@@ -1,3 +1,4 @@
+/*手機板選單*/
 let menu_btn = document.querySelector('.menu_btn')
 let menu = document.querySelector('header .bottom')
 let sub_menu_btn = document.querySelectorAll('header .bottom ul.nav li.sub > a')
@@ -17,6 +18,7 @@ sub_menu_btn.forEach((item) => {
   })
 })
 
+/*登入及註冊*/
 let login_btn = document.querySelector('.head_right .login_btn')
 let regist_btn = document.querySelector('.head_right .regist_btn')
 let login_popup_bg = document.querySelector('.popup_bg')
@@ -68,11 +70,13 @@ document.addEventListener('click', (e) => {
   }
 })
 
+/*會員登入前往*/
 let member_login = document.querySelector('.login_panel .send_btn button')
 member_login.addEventListener('click', () => {
   location.href = './member_account.html'
 })
 
+/*會員左側選單*/
 let mobile_left_menu = document.querySelector('.mobile_left_menu')
 let mobile_left_menu_btn = document.querySelector('.mobile_left_menu .selected')
 
