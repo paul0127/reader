@@ -36,10 +36,10 @@
             <div class="input_group">
               <span class="hr">或</span>
               <div class="input">
-                <input type="text" placeholder="請輸入帳號" />
+                <input type="text" name="account" placeholder="請輸入帳號" />
               </div>
               <div class="input">
-                <input type="password" placeholder="密碼" />
+                <input type="password" name="password" placeholder="密碼" />
               </div>
             </div>
             <div class="forget_btn"><a href="#">忘記密碼？</a></div>
@@ -60,16 +60,16 @@
             <div class="input_group">
               <span class="hr">或</span>
               <div class="input">
-                <input type="text" placeholder="請輸入暱稱" />
+                <input type="text" name="nickname" placeholder="請輸入暱稱" />
               </div>
               <div class="input">
-                <input type="text" placeholder="電子郵件" />
+                <input type="text" name="email" placeholder="電子郵件" />
               </div>
               <div class="input">
-                <input type="password" placeholder="設定密碼" />
+                <input type="password" name="password" placeholder="設定密碼" />
               </div>
               <div class="input">
-                <input type="password" placeholder="確認密碼" />
+                <input type="password" name="re_password" placeholder="確認密碼" />
               </div>
             </div>
             <div class="check">
@@ -99,6 +99,7 @@
 
     <header>
       <div class="container">
+        <div class="tobuy"><a href="#"><i class="far fa-question-circle"></i>如何購買?</a></div>
         <div class="top">
           <a href="./" class="logo"
             ><img src="./images/common/logo.png" alt=""
@@ -682,7 +683,7 @@
         onChanged: counter,
         responsive: {
           0: {
-            items: 1,
+            items: 2,
           },
           1200: {
             items: 3,

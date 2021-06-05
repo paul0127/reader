@@ -61,38 +61,91 @@
 .product .top .text .info .name .like span:hover::before {
   content: url(../images/common/like_active.svg);
 }
-.product .top .text .info .author {
+.product .top .text .info .name .like span.active font {
+}
+.product .top .text .info .item {
   margin-bottom: 10px;
   font-size: 1.25rem;
 }
-.product .top .text .info .author label {
+.product .top .text .info .item:last-child {
+  margin-bottom: 0;
+}
+.product .top .text .info .item label {
   margin-bottom: 0;
   font-weight: 700;
 }
-.product .top .text .info .public_date {
-  margin-bottom: 10px;
+.product .top .text .info .plan_select {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.product .top .text .info .plan_select .title {
   font-size: 1.25rem;
-}
-.product .top .text .info .public_date label {
-  margin-bottom: 0;
   font-weight: 700;
-}
-.product .top .text .info .lang {
   margin-bottom: 10px;
-  font-size: 1.25rem;
 }
-.product .top .text .info .lang label {
+.product .top .text .info .plan_select ul.tabs {
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 15px;
+}
+.product .top .text .info .plan_select ul.tabs li {
+  margin-right: 10px;
+}
+.product .top .text .info .plan_select ul.tabs li input[type='radio'] {
+  display: none;
+}
+.product .top .text .info .plan_select ul.tabs li label {
+  border: 1px solid #333;
+  padding: 5px 15px;
+  color: #333;
+  border-radius: 10px;
+  cursor: pointer;
   margin-bottom: 0;
-  font-weight: 700;
 }
-.product .top .text .info .price {
-  margin-bottom: 10px;
-  font-size: 1.25rem;
+.product
+  .top
+  .text
+  .info
+  .plan_select
+  ul.tabs
+  li
+  input[type='radio']:checked
+  + label {
+  background-color: #087a7a;
+  border-color: #087a7a;
+  color: #fff;
 }
-.product .top .text .info .price label {
-  margin-bottom: 0;
-  font-weight: 700;
+
+.product .top .text .info .plan_select .panels {
+  flex: 0 0 100%;
 }
+.product .top .text .info .plan_select .panels .panel {
+  display: none;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 1.15rem;
+}
+.product .top .text .info .plan_select .panels .panel.active {
+  display: flex;
+}
+.product .top .text .info .plan_select .panels .panel .price,
+.product .top .text .info .plan_select .panels .panel .count {
+  display: flex;
+  align-items: center;
+}
+.product .top .text .info .plan_select .panels .panel .price span,
+.product .top .text .info .plan_select .panels .panel .count span {
+  margin-left: 10px;
+  margin-right: 10px;
+  color: red;
+}
+.product .top .text .info .plan_select .panels .panel a {
+  color: #333;
+}
+
 .product .top .text .download {
   display: flex;
   justify-content: flex-end;
@@ -100,9 +153,9 @@
 .product .top .text .download span {
   background-color: #087a7a;
   color: #fff;
-  font-size: 1.75rem;
-  padding: 5px 30px;
-  border-radius: 10px;
+  font-size: 1.25rem;
+  padding: 5px 20px;
+  border-radius: 5px;
   cursor: pointer;
 }
 .product .top .text .download span:hover {
@@ -148,6 +201,11 @@
 @media (max-width: 1200px) {
   .product .top .main_pic {
     flex: 0 0 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .product .top .text {
+    padding-top: 0;
   }
   .product .top .text .info .name {
     display: flex;
@@ -156,10 +214,10 @@
   }
   .product .top .text .info .name .like {
     margin-top: 0;
-  }
-  .product .top .text .info .name .like span {
-    margin-top: 5px;
+    align-items: flex-start;
+    justify-content: flex-start;
     margin-left: 10px;
+    flex: 0 0 28px;
   }
   .product .top .text .info .name .like span::before {
     margin-right: 0;

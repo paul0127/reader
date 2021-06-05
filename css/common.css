@@ -6,11 +6,26 @@ body {
   position: relative;
 }
 
+header .tobuy {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+header .tobuy a {
+  text-decoration: none;
+  color: #333;
+}
+header .tobuy a:hover {
+  opacity: .8;
+}
+header .tobuy a i {
+  margin-right: 5px;
+}
 header .top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px 0;
+  margin-bottom: 10px;
 }
 header .top .logo {
   flex: 0 0 200px;
@@ -76,10 +91,14 @@ header .top .search ul.tags li a:hover {
   opacity: 0.8;
 }
 
-header .top ul.head_right {
+header .top .head_right {
+  flex: 0 0 200px;
   padding-left: 0;
   margin-bottom: 0;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
   list-style: none;
 }
 header .top ul.head_right li {
@@ -95,12 +114,35 @@ header .top ul.head_right li a {
 header .top ul.head_right li a:hover {
   opacity: 0.8;
 }
-header .top ul.head_right li:nth-child(2) a {
+header .top ul.head_right li:last-child a {
   padding: 5px 12px;
   color: #fff;
   background-color: #087a7a;
   border-radius: 5px;
 }
+header .top .head_right .member_name {
+  font-weight: bold;
+}
+header .top .head_right .member_name a {
+  color: #333;
+  text-decoration: none;
+}
+header .top .head_right .member_name a:hover {
+  opacity: 0.8;
+}
+header .top .head_right button.logout {
+  color: rgb(255, 255, 255);
+  background-color: rgb(8, 122, 122);
+  padding: 5px 12px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  text-decoration: none;
+}
+header .top .head_right button.logout:hover {
+  opacity: 0.8;
+}
+
 
 header .bottom {
   background-color: #087a7a;
@@ -164,6 +206,9 @@ header .bottom ul.nav > li > ul.sub_menu > li > a:hover {
   header {
     position: relative;
   }
+  header .tobuy {
+    display: none;
+  }
   header .top .logo {
     flex: 0 0 100px;
   }
@@ -173,6 +218,10 @@ header .bottom ul.nav > li > ul.sub_menu > li > a:hover {
   header .top .search {
     display: none;
   }
+  header .top .head_right {
+    flex: 0 0 auto;
+  }
+  
   header .bottom.active {
     border-bottom: 1px solid #fff;
   }

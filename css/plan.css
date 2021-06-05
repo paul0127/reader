@@ -1,0 +1,129 @@
+@import url(./common.css);
+
+.plan_form {
+  flex: 0 0 100%;
+}
+.plan_form ul.tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.plan_form ul.tabs li {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.plan_form ul.tabs li:last-child {
+  margin-right: 0;
+}
+.plan_form ul.tabs li input[type='radio'] {
+  display: none;
+}
+.plan_form ul.tabs li label {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+.plan_form ul.tabs li input[type='radio']:checked + label {
+  background-color: #087a7a;
+  color: #fff;
+  border-color: #087a7a;
+}
+
+.plan_form .panels {
+}
+.plan_form .panels .panel {
+  display: none;
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+.plan_form .panels .panel.active {
+  display: flex;
+}
+.plan_form .panels .panel .item {
+  flex: 1;
+  min-width: 250px;
+  padding: 20px 20px;
+  border-right: 1px solid #ccc;
+  text-align: center;
+}
+.plan_form .panels .panel .item:first-child {
+  border-left: 1px solid #ccc;
+}
+
+/*點數*/
+.plan_form .panels .panel.point .item .title {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+.plan_form .panels .panel.point .item .bonus {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+.plan_form .panels .panel.point .item .bonus span {
+  display: block;
+  font-size: 1.25rem;
+  color: #087a7a;
+  line-height: 1;
+}
+.plan_form .panels .panel.point .item .point_total {
+  font-size: 1.75rem;
+  margin-bottom: 10px;
+  color: #087a7a;
+}
+.plan_form .panels .panel.point .item .total {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+/*包月 包年方案*/
+.plan_form .panels .panel.month .item .title,
+.plan_form .panels .panel.year .item .title {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+.plan_form .panels .panel.month .item .per_month,
+.plan_form .panels .panel.year .item .per_month {
+  font-size: 1.75rem;
+  margin-bottom: 5px;
+  color: #087a7a;
+}
+.plan_form .panels .panel.month .item .total,
+.plan_form .panels .panel.year .item .total {
+  text-align: right;
+  margin-bottom: 10px;
+}
+.plan_form .panels .panel.month .item .point_total,
+.plan_form .panels .panel.year .item .point_total {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+/*購買按鈕*/
+.plan_form .panels .panel .item .purchase {
+  margin-bottom: 10px;
+}
+.plan_form .panels .panel .item .purchase a {
+  display: block;
+  width: 100%;
+  background-color: #087a7a;
+  color: #fff;
+  border: none;
+  padding: 8px 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+.plan_form .panels .panel .item .purchase a:hover {
+  opacity: 0.8;
+}

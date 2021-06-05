@@ -1,0 +1,131 @@
+@import url(./common.css);
+
+.payment {
+}
+.payment .table {
+}
+.payment .table .head {
+  display: flex;
+  padding: 5px;
+  border-bottom: 1px solid #333;
+  margin-bottom: 5px;
+}
+.payment .table .head .th {
+  flex: 1;
+}
+.payment .table .body {
+  display: flex;
+  padding: 5px;
+  border-bottom: 1px solid #333;
+}
+.payment .table .body .td {
+  flex: 1;
+}
+.payment .table .head .th.price,
+.payment .table .body .td.price {
+  flex: 0 0 100px !important;
+  text-align: right;
+}
+.payment .table .foot {
+  display: flex;
+  padding: 5px;
+}
+.payment .table .foot .td {
+  flex: 1;
+  text-align: right;
+  color: red;
+  font-size: 1.25rem;
+}
+
+.payment .payment_alert {
+  margin-bottom: 40px;
+}
+
+.payment .payment_info {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.payment .payment_info .title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.payment .payment_info .list {
+  margin-bottom: 20px;
+  display: flex;
+}
+.payment .payment_info .list:last-child {
+  margin-bottom: 0;
+}
+.payment .payment_info .list label {
+  flex: 0 0 50px;
+  margin-bottom: 0;
+  margin-top: 5px;
+  font-weight: 700;
+}
+.payment .payment_info .list input[type='text'] {
+  flex: 1;
+  width: 0;
+  outline: none;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 5px;
+}
+.payment .payment_info .list input[type='text']:focus {
+  border-color: #4568b2;
+  box-shadow: 0 0 4px #4568b2;
+}
+.payment .payment_info .list .address {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+.payment .payment_info .list .address select {
+  flex: 1;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 5px;
+  outline: none;
+}
+.payment .payment_info .list .address input.postcode{
+  flex: 0 0 100px;
+  line-height: 1;
+  padding: 0 5px;
+  height: 35px;
+  text-align: center;
+}
+.payment .payment_info .list .address input.addr {
+  flex: 0 0 100%;
+  justify-self: flex-end;
+}
+.payment .payment_info .payment_check {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.payment .payment_info .payment_check input[type='checkbox'] {
+  margin-right: 10px;
+}
+.payment .payment_info .payment_check label {
+  margin-bottom: 0;
+}
+.payment .payment_info .payment_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.payment .payment_info .payment_btn button {
+  padding: 5px 40px;
+  background-color: #087a7a;
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+}
+.payment .payment_info .payment_btn button:hover {
+  opacity: 0.8;
+}

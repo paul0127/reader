@@ -124,7 +124,7 @@
 .member_index .main .right_panel .s_title {
   font-size: 1rem;
   color: #757575;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 @media (max-width: 1200px) {
   .member_index .mobile_left_menu {
@@ -285,6 +285,7 @@
   background-position: top center;
   background-size: contain;
   background-repeat: no-repeat;
+  background-position:center;
   padding-bottom: 150%;
 }
 .member_index .main .right_panel form.download .item .name {
@@ -332,6 +333,26 @@
   padding: 0 15px;
   margin-bottom: 40px;
 }
+.member_index .main .right_panel form.collect .item .del{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 5px;
+}
+.member_index .main .right_panel form.collect .item .del a{
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #6d6462;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.member_index .main .right_panel form.collect .item .del a:hover{
+  opacity: .8;
+}
 .member_index .main .right_panel form.collect .item > a {
   display: block;
   margin-bottom: 10px;
@@ -351,6 +372,7 @@
   background-position: top center;
   background-size: contain;
   background-repeat: no-repeat;
+  background-position:center;
   padding-bottom: 150%;
 }
 .member_index .main .right_panel form.collect .item .name {
