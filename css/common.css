@@ -16,7 +16,7 @@ header .tobuy a {
   color: #333;
 }
 header .tobuy a:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 header .tobuy a i {
   margin-right: 5px;
@@ -143,7 +143,6 @@ header .top .head_right button.logout:hover {
   opacity: 0.8;
 }
 
-
 header .bottom {
   background-color: #087a7a;
 }
@@ -209,7 +208,7 @@ header .bottom ul.nav > li > ul.sub_menu > li > a:hover {
   header .tobuy {
     display: none;
   }
-  header .top{
+  header .top {
     margin: 10px 0;
   }
   header .top .logo {
@@ -224,7 +223,13 @@ header .bottom ul.nav > li > ul.sub_menu > li > a:hover {
   header .top .head_right {
     flex: 0 0 auto;
   }
-  
+  header .top ul.head_right li {
+    margin-right: 0;
+  }
+  header .top ul.head_right li:last-child {
+    display: none;
+  }
+
   header .bottom.active {
     border-bottom: 1px solid #fff;
   }
@@ -299,10 +304,11 @@ header .bottom ul.nav > li > ul.sub_menu > li > a:hover {
 /*頁面框架*/
 .page {
   background-color: #f9f7f5;
-  padding: 20px 0;
+  padding: 20px 0 60px 0;
 }
 .page_frame {
   display: flex;
+  margin-bottom: 30px;
 }
 @media (max-width: 1200px) {
   .page {
@@ -630,16 +636,18 @@ ul.bread li a {
   margin-bottom: 20px;
   text-align: center;
 }
-.pageinfo .section{margin-bottom: 60px;}
+.pageinfo .section {
+  margin-bottom: 60px;
+}
 .pageinfo .section .s_title {
   font-size: 1.25rem;
   margin-bottom: 15px;
   font-weight: bold;
 }
-.pageinfo .section .s_title::before{
+.pageinfo .section .s_title::before {
   content: '[';
 }
-.pageinfo .section .s_title::after{
+.pageinfo .section .s_title::after {
   content: ']';
 }
 .pageinfo .section .desc ul {
@@ -651,4 +659,120 @@ ul.bread li a {
   margin-bottom: 10px;
   font-size: 1.15rem;
   line-height: 2;
+}
+
+/*頁尾*/
+footer {
+  background-color: #333;
+  padding: 40px 0 20px 0;
+}
+footer .foot_info {
+  display: flex;
+  justify-content: space-between;
+}
+footer .foot_info .left {
+  flex: 0 0 200px;
+}
+footer .foot_info .left .foot_logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+footer .foot_info .left .foot_logo a {
+  max-width: 200px;
+}
+footer .foot_info .left .foot_logo a:hover {
+  opacity: .8;
+}
+footer .foot_info .left .foot_logo a img {
+  width: 100%;
+}
+footer .foot_info .left .copyright {
+  color: #fff;
+  margin-bottom: 20px;
+}
+footer .foot_info .left ul.social {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+footer .foot_info .left ul.social li {
+  font-size: 1.75rem;
+  margin-right: 20px;
+  line-height: 1;
+}
+footer .foot_info .left ul.social li:last-child {
+  margin-right: 0;
+}
+footer .foot_info .left ul.social li a {
+  color: #fff;
+}
+footer .foot_info .left ul.social li a:hover {
+  opacity: .8;
+}
+
+footer .foot_info .right{
+  flex: 0 0 650px;
+}
+footer .foot_info .right ul.menu {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+footer .foot_info .right ul.menu > li {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1;
+  color: #fff;
+  margin-right: 10px;
+}
+footer .foot_info .right ul.menu > li:last-child {
+  margin-right: 0;
+}
+footer .foot_info .right ul.menu > li:last-child {
+  margin-right: 0;
+}
+footer .foot_info .right ul.menu > li > span {
+  display: block;
+  margin-bottom: 25px;
+  font-size: 1.25rem;
+}
+footer .foot_info .right ul.menu > li > a {
+  color: #fff;
+}
+footer .foot_info .right ul.menu > li > ul {
+  padding-left: 0;
+  list-style: none;
+}
+footer .foot_info .right ul.menu > li > ul > li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+footer .foot_info .right ul.menu > li > ul > li:last-child {
+  margin-bottom: 0;
+}
+footer .foot_info .right ul.menu > li > ul > li > a {
+  color: #fff;
+}
+@media (max-width: 1200px) {
+  footer .foot_info{
+    flex-wrap: wrap;
+  }
+  footer .foot_info .left ul.social{
+    margin-bottom: 30px;
+  }
+  footer .foot_info .right{
+    flex: 0 0 100%;
+  }
+  footer .foot_info .right ul.menu{
+    flex-wrap: wrap;
+  }
+  footer .foot_info .right ul.menu > li{
+    flex: 0 0 50%;
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
 }

@@ -69,7 +69,11 @@
                 <input type="password" name="password" placeholder="設定密碼" />
               </div>
               <div class="input">
-                <input type="password" name="re_password" placeholder="確認密碼" />
+                <input
+                  type="password"
+                  name="re_password"
+                  placeholder="確認密碼"
+                />
               </div>
             </div>
             <div class="check">
@@ -99,7 +103,9 @@
 
     <header>
       <div class="container">
-        <div class="tobuy"><a href="#"><i class="far fa-question-circle"></i>如何購買?</a></div>
+        <div class="tobuy">
+          <a href="#"><i class="far fa-question-circle"></i>如何購買?</a>
+        </div>
         <div class="top">
           <a href="./" class="logo"
             ><img src="./images/common/logo.png" alt=""
@@ -641,7 +647,75 @@
         </div>
       </div>
     </div>
-
+    <footer>
+      <div class="container">
+        <div class="foot_info">
+          <div class="left">
+            <div class="foot_logo">
+              <a href="#"><img src="./images/common/logo.png" alt="" /></a>
+            </div>
+            <div class="copyright">© 2021 Taiwan Tech Arena 版權所有</div>
+            <ul class="social">
+              <li>
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter-square"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-line"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-envelope-square"></i></a>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="right">
+            <ul class="menu">
+              <li><span>關於TTA</span> 
+                <ul>
+                  <li><a href="#">平台簡介</a></li>
+                  <li><a href="#">徵才資訊</a></li>
+                  <li><a href="#">聯絡我們</a></li>
+                </ul>
+              </li>
+              <li><span>作者服務</span> 
+                <ul>
+                  <li><a href="#">加入成為作者</a></li>
+                  <li><a href="#">方格子為什麼適合你</a></li>
+                  <li><a href="#">作者幫助中心</a></li>
+                  <li><a href="#">創作者成長學院</a></li>
+                  <li><a href="#">方格子主題徵文</a></li>
+                  <li><a href="#">寫作者俱樂部</a></li>
+                  <li><a href="#">方格子直送計畫</a></li>
+                </ul>
+              </li>
+              <li><span>讀者服務</span> 
+                <ul>
+                  <li><a href="#">讀者常見問題</a></li>
+                  <li><a href="#">讀者幫助中心</a></li>
+                  <li><a href="#">忘記密碼</a></li>
+                  <li><a href="#">如何訂閱</a></li>
+                  <li><a href="#">如何閱讀已訂閱文章</a></li>
+                  <li><a href="#">讀者俱樂部</a></li>
+                  <li><a href="#">電子發票相關問題</a></li>
+                </ul>
+              </li>
+              <li><span>網站規範</span> 
+                <ul>
+                  <li><a href="#">會員服務條款</a></li>
+                  <li><a href="#">著作權、智慧財產權政策</a></li>
+                  <li><a href="#">隱私權政策</a></li>
+                  <li><a href="#">出版專題服務條款</a></li>
+                  <li><a href="#">贊助服務條款</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
       integrity="sha512-k2WPPrSgRFI6cTaHHhJdc8kAXaRM4JBFEDo1pPGGlYiOyv4vnA0Pp0G5XMYYxgAPmtmv/IIaQA6n5fLAyJaFMA=="
@@ -694,7 +768,7 @@
       function counter(event) {
         var items = event.item.count
         var item = event.item.index
-        console.log(event,items,item)
+        console.log(event, items, item)
       }
     </script>
   </body>
