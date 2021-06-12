@@ -209,6 +209,9 @@ header .bottom ul.nav > li > ul.sub_menu > li > a:hover {
   header .tobuy {
     display: none;
   }
+  header .top{
+    margin: 10px 0;
+  }
   header .top .logo {
     flex: 0 0 100px;
   }
@@ -617,4 +620,35 @@ ul.bread li a {
     padding: 30px 20px;
     height: 450px;
   }
+}
+
+/*單頁*/
+.pageinfo .title {
+  color: #665e5c;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.pageinfo .section{margin-bottom: 60px;}
+.pageinfo .section .s_title {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.pageinfo .section .s_title::before{
+  content: '[';
+}
+.pageinfo .section .s_title::after{
+  content: ']';
+}
+.pageinfo .section .desc ul {
+  list-style: decimal;
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+.pageinfo .section .desc ul li {
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+  line-height: 2;
 }

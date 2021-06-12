@@ -40,6 +40,7 @@
 }
 
 .plan_form .panels {
+  margin-bottom: 80px;
 }
 .plan_form .panels .panel {
   display: none;
@@ -126,4 +127,80 @@
 }
 .plan_form .panels .panel .item .purchase a:hover {
   opacity: 0.8;
+}
+/*注意事項*/
+.plan_form .notice {
+  margin-bottom: 80px;
+}
+.plan_form .notice .title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.plan_form .notice ul {
+  padding-left: 20px;
+}
+.plan_form .notice ul li {
+  margin-bottom: 10px;
+  line-height: 1.75;
+}
+/*常見問題*/
+.plan_form .qanda{
+  margin-bottom: 80px;
+}
+.plan_form .qanda .title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.plan_form .qanda .item {
+  margin-bottom: 30px;
+}
+.plan_form .qanda .item .name {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.plan_form .qanda .item .name::before {
+  content: 'Q';
+  background-color: #333;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+.plan_form .qanda .item .con {
+  display: flex;
+  margin-left: 40px;
+  background-color: #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+.plan_form .qanda .item .con::before {
+  content: 'A';
+  background-color: #087a7a;
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  color: #fff;
+  margin-right: 10px;
+}
+
+/*著作權*/
+.plan_form .copyright .title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.plan_form .copyright .con ul{
+  list-style: decimal;
+  padding-left: 20px;
 }

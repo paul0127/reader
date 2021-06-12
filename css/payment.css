@@ -37,6 +37,23 @@
   font-size: 1.25rem;
 }
 
+/*注意事項*/
+.payment .notice {
+  margin-bottom: 80px;
+}
+.payment .notice .title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.payment .notice ul {
+  padding-left: 20px;
+}
+.payment .notice ul li {
+  margin-bottom: 10px;
+  line-height: 1.75;
+}
+
 .payment .payment_alert {
   margin-bottom: 40px;
 }

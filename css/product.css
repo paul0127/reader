@@ -74,6 +74,9 @@
   margin-bottom: 0;
   font-weight: 700;
 }
+.product .top .text .info .item a{
+  color: #333;
+}
 .product .top .text .info .plan_select {
   margin-bottom: 20px;
   display: flex;
