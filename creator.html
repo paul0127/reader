@@ -215,8 +215,15 @@
           </div>
           <div class="creator_article">
             <div class="article_top">
-              <div class="search_article"><input type="text" /></div>
-              <div class="filter"><div class="btn">排序</div></div>
+              <div class="search_article"><input type="text" placeholder="幫你從標題找文章"/></div>
+              <div class="filter">
+                <div class="filter_btn desc">排序</div>
+                <div class="popup">
+                  <div class="arrow"></div>
+                  <div class="opt active">由新到舊</div>
+                  <div class="opt">由舊到新</div>
+                </div>
+              </div>
             </div>
             <div class="item">
               <a href="#" class="top">
@@ -344,5 +351,12 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/main.js"></script>
+    <script>
+      let filter_btn = document.querySelector('.article_top .filter .filter_btn')
+      let filter_pop = document.querySelector('.article_top .filter .popup')
+      filter_btn.addEventListener('click',()=>{
+        filter_pop.classList.toggle('active')
+      })
+    </script>
   </body>
 </html>
