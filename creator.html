@@ -184,13 +184,39 @@
         </ul>
         <div class="page_frame">
           <div class="creator_info">
-            <div
-              class="avatar"
-              style="background-image: url(./images/creator/avatarpng.png)"
-            ></div>
-            <div class="name">Paul</div>
-            <div class="desc">
-              艾莫西，1979 年生，肖羊。曾任 H 痞客邦電影圈社群企劃，MaisonMotion
+            <div class="top">
+              <div
+                class="avatar"
+                style="background-image: url(./images/product/pic_01.png)"
+              ></div>
+              <div class="mobile_right">
+                <div class="name">Paul</div>
+                <div class="desc">
+                  艾莫西，1979 年生，肖羊。曾任 H
+                  痞客邦電影圈社群企劃，MaisonMotion
+                  美昇國際影業資深媒體企劃。文字散見
+                  ELLE、姊妹淘、奇摩電影、關鍵評論網、KKBOX、Bark音痴路雜誌等。深信所有的書寫都有意義。有一個部落格與一個粉絲團，以心情經營，搜尋艾莫西就找得到。
+                </div>
+                <div class="mobile_add_favcreator">
+                  <button>追蹤</button>
+                </div>
+                <ul class="social">
+                  <li>
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                  </li>
+                  <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                  <li>
+                    <a href="#"><i class="fas fa-globe"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="mobile_desc">
+              艾莫西，1979 年生，肖羊。曾任 H
+              痞客邦電影圈社群企劃，MaisonMotion
               美昇國際影業資深媒體企劃。文字散見
               ELLE、姊妹淘、奇摩電影、關鍵評論網、KKBOX、Bark音痴路雜誌等。深信所有的書寫都有意義。有一個部落格與一個粉絲團，以心情經營，搜尋艾莫西就找得到。
             </div>
@@ -215,7 +241,9 @@
           </div>
           <div class="creator_article">
             <div class="article_top">
-              <div class="search_article"><input type="text" placeholder="幫你從標題找文章"/></div>
+              <div class="search_article">
+                <input type="text" placeholder="幫你從標題找文章" />
+              </div>
               <div class="filter">
                 <div class="filter_btn desc">排序</div>
                 <div class="popup">
@@ -352,9 +380,11 @@
     ></script>
     <script src="./js/main.js"></script>
     <script>
-      let filter_btn = document.querySelector('.article_top .filter .filter_btn')
+      let filter_btn = document.querySelector(
+        '.article_top .filter .filter_btn'
+      )
       let filter_pop = document.querySelector('.article_top .filter .popup')
-      filter_btn.addEventListener('click',()=>{
+      filter_btn.addEventListener('click', () => {
         filter_pop.classList.toggle('active')
       })
     </script>

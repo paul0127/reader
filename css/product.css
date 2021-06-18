@@ -51,15 +51,19 @@
   cursor: pointer;
 }
 .product .top .text .info .name .like span::before {
-  content: url(../images/common/like.svg);
-  width: 24px;
-  height: 22px;
+  content: '\f004';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
   margin-right: 10px;
-  margin-top: 3px;
+  color: #ccc;
 }
 .product .top .text .info .name .like span.active::before,
 .product .top .text .info .name .like span:hover::before {
-  content: url(../images/common/like_active.svg);
+  content: '\f004';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 700;
+  margin-right: 10px;
+  color: #ef73ef;
 }
 .product .top .text .info .name .like span.active font {
 }
