@@ -120,6 +120,7 @@
                 placeholder="請輸入搜尋內容"
                 v-model="search_text"
               />
+              <div class="clear" v-show="search_text" @click="clear_search"><i class="fas fa-times-circle"></i></div>
               <ul class="search_result" :class="{'active':search_text}">
                 <li>
                   <a class="more" :href="'/search?filter=article&value='+search_text">查看符合「{{search_text}}」的文章</a>

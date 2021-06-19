@@ -100,6 +100,9 @@ let search = new Vue({
   methods:{
     get_search_result(){
       console.log(this.search_text)
+    },
+    clear_search(){
+      this.search_text = ''
     }
   },
   watch:{

@@ -58,6 +58,15 @@ header .top .search form input[type='text'] {
   border: 1px solid #333;
   padding: 3px 10px;
 }
+header .top .search form .clear{
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  cursor: pointer;
+}
+header .top .search form .clear:hover{
+  opacity: .8;
+}
 header .top .search ul.search_result {
   position: absolute;
   top: 100%;
@@ -65,7 +74,7 @@ header .top .search ul.search_result {
   z-index: 2;
   margin-top: 2px;
   width: 100%;
-  min-height: 300px;
+  min-height: 100px;
   background-color: #fff;
   padding-left: 0;
   list-style: none;
