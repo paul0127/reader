@@ -10,7 +10,7 @@
 .product .top {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .product .top .main_pic {
   flex: 0 0 350px;
@@ -174,11 +174,13 @@
   flex: 0 0 100%;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   padding-left: 0;
   margin-bottom: 0;
 }
 .product .top ul.tags li {
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 .product .top ul.tags li:last-child {
   margin-right: 0;
