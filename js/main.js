@@ -85,3 +85,26 @@ if (mobile_left_menu) {
     mobile_left_menu.classList.toggle('active')
   })
 }
+
+let search = new Vue({
+  el: '#search',
+  data() {
+    return {
+      search_text:'',
+      toggle:0,
+    }
+  },
+  created() {
+    this.debouncedGetAnswer = _.debounce(this.get_search_result, 500)
+  },
+  methods:{
+    get_search_result(){
+      console.log(this.search_text)
+    }
+  },
+  watch:{
+    search_text(new_search, old_search) {
+      this.debouncedGetAnswer()
+    }
+  }
+})

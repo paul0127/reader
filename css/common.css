@@ -46,18 +46,94 @@ header .top .search_btn i {
 header .top .search {
   flex: 1;
   max-width: 600px;
+  position: relative;
 }
 header .top .search form {
   display: flex;
-  margin-bottom: 8px;
 }
 header .top .search form input[type='text'] {
   flex: 1;
   outline: none;
-  margin-right: 10px;
-  border-radius: 20px;
+  border-radius: 5px;
   border: 1px solid #333;
   padding: 3px 10px;
+}
+header .top .search ul.search_result {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+  margin-top: 2px;
+  width: 100%;
+  min-height: 300px;
+  background-color: #fff;
+  padding-left: 0;
+  list-style: none;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition-duration: 0.5s;
+}
+header .top .search ul.search_result.active {
+  transform: scaleY(1);
+}
+header .top .search ul.search_result > li {
+  padding: 10px 0;
+  border-bottom: 1px solid #bbb;
+}
+header .top .search ul.search_result > li:last-child {
+  border-bottom: none;
+}
+header .top .search ul.search_result > li .title {
+  font-size: 1.15rem;
+  margin-bottom: 5px;
+  padding: 0 20px;
+}
+header .top .search ul.search_result > li .s_authors {
+  margin-bottom: 10px;
+}
+header .top .search ul.search_result > li .s_authors a.item {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+}
+header .top .search ul.search_result > li .s_authors a.item:hover {
+  background-color: #ccc;
+}
+header .top .search ul.search_result > li .s_authors .item .avatar {
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+header .top .search ul.search_result > li .s_tags{
+  margin: 10px 0;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+header .top .search ul.search_result > li .s_tags .item{
+  background-color: #bbb;
+  color: #333;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  font-size: .75rem;
+  text-decoration: none;
+}
+header .top .search ul.search_result > li .s_tags .item:hover{
+  opacity: .8;
+}
+header .top .search ul.search_result > li a.more {
+  color: #555;
+  text-decoration: underline;
+  padding: 0 20px;
+}
+header .top .search ul.search_result > li a.more:hover {
+  color: #000;
 }
 header .top .search form button {
   background-color: #087a7a;
@@ -682,7 +758,7 @@ footer .foot_info .left .foot_logo a {
   max-width: 200px;
 }
 footer .foot_info .left .foot_logo a:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 footer .foot_info .left .foot_logo a img {
   width: 100%;
@@ -710,10 +786,10 @@ footer .foot_info .left ul.social li a {
   color: #fff;
 }
 footer .foot_info .left ul.social li a:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 
-footer .foot_info .right{
+footer .foot_info .right {
   flex: 0 0 650px;
 }
 footer .foot_info .right ul.menu {
@@ -758,19 +834,19 @@ footer .foot_info .right ul.menu > li > ul > li > a {
   color: #fff;
 }
 @media (max-width: 1200px) {
-  footer .foot_info{
+  footer .foot_info {
     flex-wrap: wrap;
   }
-  footer .foot_info .left ul.social{
+  footer .foot_info .left ul.social {
     margin-bottom: 30px;
   }
-  footer .foot_info .right{
+  footer .foot_info .right {
     flex: 0 0 100%;
   }
-  footer .foot_info .right ul.menu{
+  footer .foot_info .right ul.menu {
     flex-wrap: wrap;
   }
-  footer .foot_info .right ul.menu > li{
+  footer .foot_info .right ul.menu > li {
     flex: 0 0 50%;
     margin-right: 0;
     margin-bottom: 40px;

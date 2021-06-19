@@ -113,14 +113,94 @@
           <div class="search_btn">
             <i class="fas fa-search"></i>
           </div>
-          <div class="search">
-            <form><input type="text" /><button>搜尋</button></form>
-            <ul class="tags">
-              <li><a href="#">#藏書集</a></li>
-              <li><a href="#">#藏書集</a></li>
-              <li><a href="#">#藏書集</a></li>
-              <li><a href="#">#藏書集</a></li>
-            </ul>
+          <div class="search" id="search">
+            <form>
+              <input
+                type="text"
+                placeholder="請輸入搜尋內容"
+                v-model="search_text"
+              />
+              <ul class="search_result" :class="{'active':search_text}">
+                <li>
+                  <a class="more" :href="'/search?filter=article&value='+search_text">查看符合「{{search_text}}」的文章</a>
+                </li>
+                <li>
+                  <div class="title">作者</div>
+                  <div class="s_authors">
+                    <a href="#" class="item">
+                      <div
+                        class="avatar"
+                        style="
+                          background-image: url(./images/product/pic_01.png);
+                        "
+                      ></div>
+                      <div class="name">簡志宇先生</div>
+                    </a>
+                    <a href="#" class="item">
+                      <div
+                        class="avatar"
+                        style="
+                          background-image: url(./images/product/pic_01.png);
+                        "
+                      ></div>
+                      <div class="name">簡志宇先生</div>
+                    </a>
+                    <a href="#" class="item">
+                      <div
+                        class="avatar"
+                        style="
+                          background-image: url(./images/product/pic_01.png);
+                        "
+                      ></div>
+                      <div class="name">簡志宇先生</div>
+                    </a>
+                  </div>
+                  <a class="more" href="#">查看更多結果</a>
+                </li>
+                <li>
+                  <div class="title">作者</div>
+                  <div class="s_tags">
+                    <a href="#" class="item">
+                      文章
+                    </a>
+                    <a href="#" class="item">
+                      文章
+                    </a>
+                    <a href="#" class="item">
+                      文章
+                    </a>
+                    <a href="#" class="item">
+                      文章
+                    </a>
+                    <a href="#" class="item">
+                      文章
+                    </a>
+                    <a href="#" class="item">
+                      文章
+                    </a>
+                    <a href="#" class="item">
+                      文章
+                    </a>
+                    <a href="#" class="item">
+                      文章
+                    </a>
+                    <a href="#" class="item">
+                      文章
+                    </a>
+                    <a href="#" class="item">
+                      文章
+                    </a>
+                    <a href="#" class="item">
+                      文章
+                    </a>
+                    <a href="#" class="item">
+                      文章
+                    </a>
+                  </div>
+                  <a class="more" href="#">查看更多結果</a>
+                </li>
+              </ul>
+            </form>
           </div>
           <ul class="head_right">
             <li><a href="#" class="login_btn">登入</a></li>
@@ -265,8 +345,7 @@
         <div class="index_recommend">
           <div class="recommend_item">
             <div class="title">
-              <label for="">編輯嚴選</label><a href="#">看更多</a
-              ><span>1/4</span>
+              <label for="">編輯嚴選</label><span>1/4</span>
             </div>
             <div class="recommend_slider owl-carousel owl-theme">
               <div class="item">
@@ -381,8 +460,7 @@
           </div>
           <div class="recommend_item">
             <div class="title">
-              <label for="">主題報導</label><a href="#">看更多</a
-              ><span>1/4</span>
+              <label for="">主題報導</label><span>1/4</span>
             </div>
             <div class="recommend_slider owl-carousel owl-theme">
               <div class="item">
@@ -443,8 +521,7 @@
           </div>
           <div class="recommend_item">
             <div class="title">
-              <label for="">為你推薦</label><a href="#">看更多</a
-              ><span>1/4</span>
+              <label for="">為你推薦</label><span>1/4</span>
             </div>
             <div class="recommend_slider owl-carousel owl-theme">
               <div class="item">
@@ -505,8 +582,7 @@
           </div>
           <div class="recommend_item">
             <div class="title">
-              <label for="">精選專題</label><a href="#">看更多</a
-              ><span>1/4</span>
+              <label for="">精選專題</label><span>1/4</span>
             </div>
             <div class="recommend_slider owl-carousel owl-theme">
               <div class="item">
@@ -567,8 +643,7 @@
           </div>
           <div class="recommend_item">
             <div class="title">
-              <label for="">綠能類別</label><a href="#">看更多</a
-              ><span>1/4</span>
+              <label for="">綠能類別</label><span>1/4</span>
             </div>
             <div class="recommend_slider owl-carousel owl-theme">
               <div class="item">
@@ -670,17 +745,19 @@
               </li>
             </ul>
           </div>
-          
+
           <div class="right">
             <ul class="menu">
-              <li><span>關於TTA</span> 
+              <li>
+                <span>關於TTA</span>
                 <ul>
                   <li><a href="#">平台簡介</a></li>
                   <li><a href="#">徵才資訊</a></li>
                   <li><a href="#">聯絡我們</a></li>
                 </ul>
               </li>
-              <li><span>作者服務</span> 
+              <li>
+                <span>作者服務</span>
                 <ul>
                   <li><a href="#">加入成為作者</a></li>
                   <li><a href="#">方格子為什麼適合你</a></li>
@@ -691,7 +768,8 @@
                   <li><a href="#">方格子直送計畫</a></li>
                 </ul>
               </li>
-              <li><span>讀者服務</span> 
+              <li>
+                <span>讀者服務</span>
                 <ul>
                   <li><a href="#">讀者常見問題</a></li>
                   <li><a href="#">讀者幫助中心</a></li>
@@ -702,7 +780,8 @@
                   <li><a href="#">電子發票相關問題</a></li>
                 </ul>
               </li>
-              <li><span>網站規範</span> 
+              <li>
+                <span>網站規範</span>
                 <ul>
                   <li><a href="#">會員服務條款</a></li>
                   <li><a href="#">著作權、智慧財產權政策</a></li>
@@ -727,6 +806,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="./offset/owlCarousel/js/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <script src="./js/main.js"></script>
     <script>
       $('.slider').owlCarousel({
@@ -768,7 +848,7 @@
       function counter(event) {
         var items = event.item.count
         var item = event.item.index
-        console.log(event, items, item)
+        //console.log(event, items, item)
       }
     </script>
   </body>
