@@ -52,7 +52,7 @@
 }
 .product .top .text .info .name .like span::before {
   content: '\f004';
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
   font-weight: 400;
   margin-right: 10px;
   color: #ccc;
@@ -60,7 +60,7 @@
 .product .top .text .info .name .like span.active::before,
 .product .top .text .info .name .like span:hover::before {
   content: '\f004';
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
   font-weight: 700;
   margin-right: 10px;
   color: #ef73ef;
@@ -78,7 +78,7 @@
   margin-bottom: 0;
   font-weight: 700;
 }
-.product .top .text .info .item a{
+.product .top .text .info .item a {
   color: #333;
 }
 .product .top .text .info .plan_select {
@@ -169,27 +169,28 @@
   opacity: 0.8;
 }
 /*標籤*/
-.product .top .tags {
+.product .top ul.tags {
+  margin-top: 30px;
   flex: 0 0 100%;
-  display: flex;
-  margin-top: 20px;
-}
-.product .top .tags label {
-  margin-bottom: 0;
-  margin-right: 15px;
-  font-weight: 700;
-}
-.product .top .tags ul {
   list-style: none;
   display: flex;
   padding-left: 0;
   margin-bottom: 0;
 }
-.product .top .tags ul li {
+.product .top ul.tags li {
   margin-right: 10px;
 }
-.product .top .tags ul li:last-child {
+.product .top ul.tags li:last-child {
   margin-right: 0;
+}
+.product .top ul.tags li a {
+  background-color: #e4e4e4;
+  padding: 3px 10px;
+  text-decoration: none;
+  color: #333;
+}
+.product .top ul.tags li a:hover {
+  opacity: .8;
 }
 
 /*產品描述*/

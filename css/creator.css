@@ -100,15 +100,17 @@
   padding: 0 5px;
   margin-bottom: 15px;
 }
-.creator .creator_info .tags .item span {
+.creator .creator_info .tags .item a {
   background-color: #e9e5e3;
   display: block;
   min-width: 40px;
   padding: 5px 10px;
   text-align: center;
   cursor: pointer;
+  text-decoration: none;
+  color: #333;
 }
-.creator .creator_info .tags .item span:hover {
+.creator .creator_info .tags .item a:hover {
   opacity: 0.8;
 }
 /*文章列表*/

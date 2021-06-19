@@ -222,6 +222,11 @@
   margin-right: 10px;
   margin-bottom: 10px;
   padding: 3px 10px;
+  text-decoration: none;
+  color: #333;
+}
+.search_page .bottom ul.panel li .tags_block .tag_item:hover {
+  opacity: .8;
 }
 @media (max-width: 1200px) {
   .search_page .bottom ul.panel li .article_item .article_block {
