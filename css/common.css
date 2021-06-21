@@ -58,14 +58,14 @@ header .top .search form input[type='text'] {
   border: 1px solid #333;
   padding: 3px 10px;
 }
-header .top .search form .clear{
+header .top .search form .clear {
   position: absolute;
   top: 4px;
   right: 5px;
   cursor: pointer;
 }
-header .top .search form .clear:hover{
-  opacity: .8;
+header .top .search form .clear:hover {
+  opacity: 0.8;
 }
 header .top .search ul.search_result {
   position: absolute;
@@ -118,23 +118,23 @@ header .top .search ul.search_result > li .s_authors .item .avatar {
   border-radius: 100%;
   margin-right: 10px;
 }
-header .top .search ul.search_result > li .s_tags{
+header .top .search ul.search_result > li .s_tags {
   margin: 10px 0;
   padding: 0 20px;
   display: flex;
   flex-wrap: wrap;
 }
-header .top .search ul.search_result > li .s_tags .item{
+header .top .search ul.search_result > li .s_tags .item {
   background-color: #bbb;
   color: #333;
   padding: 5px 10px;
   margin-bottom: 10px;
   margin-right: 10px;
-  font-size: .75rem;
+  font-size: 0.75rem;
   text-decoration: none;
 }
-header .top .search ul.search_result > li .s_tags .item:hover{
-  opacity: .8;
+header .top .search ul.search_result > li .s_tags .item:hover {
+  opacity: 0.8;
 }
 header .top .search ul.search_result > li a.more {
   color: #555;
@@ -723,6 +723,7 @@ ul.bread li a {
 }
 .pageinfo .section {
   margin-bottom: 60px;
+  line-height: 2;
 }
 .pageinfo .section .s_title {
   font-size: 1.25rem;
@@ -735,12 +736,26 @@ ul.bread li a {
 .pageinfo .section .s_title::after {
   content: ']';
 }
-.pageinfo .section .desc ul {
+.pageinfo .section .desc .sub_desc {
+  font-size: 1.15rem;
+  margin-bottom: 20px;
+}
+.pageinfo .section .desc > ul {
   list-style: decimal;
   padding-left: 20px;
   margin-bottom: 0;
 }
-.pageinfo .section .desc ul li {
+.pageinfo .section .desc > ul > li {
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+  line-height: 2;
+}
+.pageinfo .section .desc > ul > li > ul {
+  padding-left: 20px;
+  list-style: disc;
+  margin-top: 10px;
+}
+.pageinfo .section .desc > ul > li > ul > li {
   margin-bottom: 10px;
   font-size: 1.15rem;
   line-height: 2;
