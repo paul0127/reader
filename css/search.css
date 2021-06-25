@@ -104,6 +104,11 @@
   text-decoration: none;
   display: block;
   color: #333;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
 }
 .search_page .bottom ul.panel li .article_item .text .desc:hover {
   color: #000;
@@ -194,7 +199,7 @@
   border: 1px solid #dbd8d6;
 }
 .search_page .bottom ul.panel li .author_item .avatar:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 .search_page .bottom ul.panel li .author_item .text .name {
   font-size: 1.25rem;
@@ -208,6 +213,11 @@
 .search_page .bottom ul.panel li .author_item .text .desc {
   min-height: 120px;
   color: #333;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
 }
 .search_page .bottom ul.panel li .author_item .text .desc:hover {
   color: #000;
@@ -226,7 +236,7 @@
   color: #333;
 }
 .search_page .bottom ul.panel li .tags_block .tag_item:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 @media (max-width: 1200px) {
   .search_page .bottom ul.panel li .article_item .article_block {

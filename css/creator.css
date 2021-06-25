@@ -82,6 +82,9 @@
   padding: 8px;
   font-size: 1.25rem;
 }
+.creator .creator_info .add_favcreator button.loved {
+  background-color: #AAA;
+}
 .creator .creator_info .add_favcreator button:hover {
   opacity: 0.8;
 }
@@ -264,6 +267,11 @@
 }
 .creator .creator_article .item .top .text .desc {
   color: #333;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
 }
 .creator .creator_article .item .bottom {
   margin-top: 20px;
@@ -301,7 +309,7 @@
   .creator .creator_info .name{
     flex: 0 0 100%;
     text-align: left;
-    margin-bottom: 0;
+    margin-bottom: 5px;
   }
   .creator .creator_info .desc{
     display: none;

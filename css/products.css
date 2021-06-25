@@ -30,7 +30,7 @@
 }
 .products .list .item:first-child a.img {
   flex: 0 0 740px;
-  padding-bottom: 0;
+  padding-bottom: 33%;
   margin-right: 30px;
   margin-bottom: 0;
 }
@@ -46,6 +46,11 @@
   font-weight: 700;
   display: block;
   text-decoration: none;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
 }
 .products .list .item .name a:hover {
   opacity: 0.8;
@@ -55,6 +60,13 @@
   line-height: 1.5;
   margin-bottom: 20px;
   word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+}
+.products .list .item:first-child .desc {
+  -webkit-line-clamp: 10;
 }
 .products .list .item .author a {
   color: #333;
@@ -80,6 +92,9 @@
   }
   .products .list .item:first-child {
     display: block;
+  }
+  .products .list .item:first-child .desc{
+    -webkit-line-clamp: 5;
   }
   .products .list .item:first-child a.img {
     width: 100%;

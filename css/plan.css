@@ -34,10 +34,19 @@
   cursor: pointer;
 }
 .plan_form ul.tabs li input[type='radio']:checked + label {
-  background-color: #087a7a;
+  background-color: #116f86;
   color: #fff;
-  border-color: #087a7a;
+  border-color: #116f86;
 }
+.plan_form ul.tabs li:nth-child(2) input[type='radio']:checked + label {
+  background-color: #0c94b3;
+  border-color: #0c94b3;
+}
+.plan_form ul.tabs li:nth-child(3) input[type='radio']:checked + label {
+  background-color: #0e988b;
+  border-color: #0e988b;
+}
+
 
 .plan_form .panels {
   margin-bottom: 80px;
@@ -104,8 +113,8 @@
   text-align: right;
   margin-bottom: 10px;
 }
-.plan_form .panels .panel.month .item .point_total,
-.plan_form .panels .panel.year .item .point_total {
+.plan_form .panels .panel:nth-child(2) .item .point_total,
+.plan_form .panels .panel:nth-child(3) .item .point_total {
   font-size: 1rem;
   margin-bottom: 20px;
   text-align: right;
@@ -118,7 +127,7 @@
 .plan_form .panels .panel .item .purchase a {
   display: block;
   width: 100%;
-  background-color: #087a7a;
+  background-color: #116f86;
   color: #fff;
   border: none;
   padding: 8px 0;
@@ -128,6 +137,15 @@
 .plan_form .panels .panel .item .purchase a:hover {
   opacity: 0.8;
 }
+
+.plan_form .panels .panel.month .item .purchase a {
+  background-color: #0c94b3;
+}
+.plan_form .panels .panel.year .item .purchase a {
+  background-color: #0e988b;
+}
+
+
 /*注意事項*/
 .plan_form .notice {
   margin-bottom: 80px;
@@ -145,7 +163,7 @@
   line-height: 1.75;
 }
 /*常見問題*/
-.plan_form .qanda{
+.plan_form .qanda {
   margin-bottom: 80px;
 }
 .plan_form .qanda .title {
@@ -200,7 +218,7 @@
   font-weight: 700;
   margin-bottom: 20px;
 }
-.plan_form .copyright .con ul{
+.plan_form .copyright .con ul {
   list-style: decimal;
   padding-left: 20px;
 }

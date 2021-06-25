@@ -51,6 +51,10 @@
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 46px);
 }
 .index_top .index_rank ul li {
   padding-bottom: 7px;
@@ -78,6 +82,11 @@
   color: #333;
   font-weight: 700;
   text-decoration: none;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
 }
 .index_top .index_rank ul li .con .name a:hover {
   opacity: 0.8;
@@ -102,7 +111,7 @@
   margin-top: 20px;
 }
 .index_recommend .recommend_item {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 .index_recommend .recommend_item .title {
   display: flex;
@@ -148,6 +157,10 @@
   color: #333;
   text-decoration: none;
   font-weight: 700;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 .index_recommend .recommend_item .recommend_slider .item .name a:hover {
   opacity: 0.8;
@@ -230,6 +243,7 @@
   }
   .index_recommend .recommend_item {
     width: 100%;
+    margin-bottom: 30px;
   }
   .index_recommend .recommend_item .title label {
     font-size: 1.5rem;

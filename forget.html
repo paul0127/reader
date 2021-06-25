@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>產品清單</title>
+    <title>忘記密碼</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./offset/fontawesome/css/all.min.css" />
-    <link rel="stylesheet" href="./css/product.css" />
+    <link rel="stylesheet" href="./css/page.css" />
   </head>
   <body>
     <div class="popup_bg">
@@ -177,133 +177,14 @@
     </header>
 
     <div class="page">
-      <!--<div class="top_banner">
-        <img src="./images/common/top_banner.png" alt="" />
-      </div>-->
-
       <div class="container">
         <ul class="bread">
           <li><a href="">首頁</a></li>
-          <li><a href="">科技與3C</a></li>
-          <li>不要讓未來的你，討厭現在的自己</li>
+          <li>忘記密碼</li>
         </ul>
-        <div class="page_frame">
-          <div class="product" id="app">
-            <div class="top">
-              <div class="main_pic">
-                <img src="./images/product/pic_01.png" alt="" />
-              </div>
-              <div class="text">
-                <div class="info">
-                  <div class="name">
-                    TTA CORPORATE MEMBER MONTHL-創業家投資人簡志宇先生
-                    <div class="like">
-                      <span class=""><font>加入收藏</font></span>
-                    </div>
-                  </div>
+        <div class="pageinfo">
+          <div class="title">忘記密碼</div>
 
-                  <div class="item">
-                    <label for="">作者：</label><a href="#">簡志宇先生</a>
-                  </div>
-                  <div class="item">
-                    <label for="">出版日期：</label>2021/05/20
-                  </div>
-                  <div class="item"><label for="">語言：</label>繁體中文</div>
-                  <div class="item"><label for="">花費點數：</label>200點</div>
-                  <div class="plan_select">
-                    <div class="title">購買方式：</div>
-                    <ul class="tabs">
-                      <li>
-                        <input
-                          type="radio"
-                          name="type"
-                          value="0"
-                          id="type_0"
-                        /><label for="type_0">點數購買</label>
-                      </li>
-                      <li>
-                        <input
-                          type="radio"
-                          name="type"
-                          value="1"
-                          id="type_1"
-                        /><label for="type_1">方案購買</label>
-                      </li>
-                    </ul>
-                    <div class="panels">
-                      <div class="panel">
-                        單次下載
-                        <div class="price"><span>200</span>點</div>
-                      </div>
-                      <div class="panel active">
-                        至2021-06-03，剩餘下載次數
-                        <div class="count"><span>3</span>次</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="download">
-                  <span @click="download()">點擊下載</span>
-                </div>
-              </div>
-              <ul class="tags">
-                <li><a href="#">3C</a></li>
-                <li><a href="#">科技</a></li>
-              </ul>
-            </div>
-            <div class="main">
-              <div class="title"><span>內容簡介</span></div>
-              <div class="editor">
-                Message from<br />
-                TTA Partnership Director<br />
-                TTA Eco Insight.<br />
-                TTA Co-Creation Platform<br />
-                TTA Startups of the Month<br />
-                Explore Innovation with<br />
-                TTA Corporate Partners.<br />
-                <br /><br />
-                TaiwanTech
-                Arena(TA)是為我國新創對接加速器、企業合作、資金投資、國際市場各面向的整合性台回顧2020年,TTA針對國內企業的不同產業、地區協會、國際企業、新創社群合作了各類對接活動之後,TTA新創生態系統的各產業企業、協會、國際企業、新創社群也都建立並落實與TTA新創生態系、新創企業對接交流的模式。
-              </div>
-            </div>
-          </div>
-          <div class="right_menu">
-            <div class="class_item">
-              <div class="title">主題專區</div>
-              <ul>
-                <li>
-                  <a
-                    href="#"
-                    style="
-                      background-image: url(./images/common/top_banner.png);
-                    "
-                    ><span>主題一主題一主題一主題一主題一主題一</span></a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    style="background-image: url(./images/common/right_pic.png)"
-                    ><span>主題一</span></a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    style="background-image: url(./images/common/right_pic.png)"
-                    ><span>主題一</span></a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    style="background-image: url(./images/common/right_pic.png)"
-                    ><span>主題一</span></a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -313,18 +194,5 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/main.js"></script>
-    <script>
-      let app = new Vue({
-        el: '#app',
-        data() {
-          return {}
-        },
-        methods: {
-          download() {
-            window.open('./uploads/pdf/pdf1.pdf', '_blank')
-          },
-        },
-      })
-    </script>
   </body>
 </html>
