@@ -165,13 +165,25 @@
 .index_recommend .recommend_item .recommend_slider .item .name a:hover {
   opacity: 0.8;
 }
-.index_recommend .recommend_item .recommend_slider .item .author a {
+.index_recommend .recommend_item .recommend_slider .item .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.index_recommend .recommend_item .recommend_slider .item .bottom .author a {
   color: #333;
   text-decoration: none;
   display: flex;
   align-items: center;
 }
-.index_recommend .recommend_item .recommend_slider .item .author a span {
+.index_recommend
+  .recommend_item
+  .recommend_slider
+  .item
+  .bottom
+  .author
+  a
+  span {
   width: 30px;
   height: 30px;
   background-position: center;
@@ -180,8 +192,19 @@
   border: 1px solid #ccc;
   margin-right: 10px;
 }
-.index_recommend .recommend_item .recommend_slider .item .author a:hover {
+.index_recommend
+  .recommend_item
+  .recommend_slider
+  .item
+  .bottom
+  .author
+  a:hover {
   opacity: 0.8;
+}
+
+.index_recommend .recommend_item .recommend_slider .item .bottom .loved i {
+  margin-right: 5px;
+  color: #333;
 }
 .index_recommend .recommend_item .recommend_slider .owl-nav {
   position: absolute;

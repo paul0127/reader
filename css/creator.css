@@ -275,6 +275,11 @@
 }
 .creator .creator_article .item .bottom {
   margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.creator .creator_article .item .bottom .loved i{
+  margin-right: 5px;
 }
 @media (max-width: 1200px) {
   .creator .page_frame {
