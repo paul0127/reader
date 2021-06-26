@@ -114,7 +114,8 @@
   color: #000;
 }
 .search_page .bottom ul.panel li .article_item .text .article_bottom {
-  display: block;
+  display: flex;
+  justify-content: space-between;
 }
 .search_page .bottom ul.panel li .article_item .text .article_bottom .left {
   display: flex;
@@ -162,6 +163,9 @@
   .left
   .time {
   margin-left: 5px;
+}
+.search_page .bottom ul.panel li .article_item .text .article_bottom .right .loved i{
+  margin-right: 5px;
 }
 .search_page .bottom ul.panel li .article_item .main_pic {
   flex: 0 0 290px;

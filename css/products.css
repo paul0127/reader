@@ -68,16 +68,21 @@
 .products .list .item:first-child .desc {
   -webkit-line-clamp: 10;
 }
-.products .list .item .author a {
+.products .list .item .bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.products .list .item .bottom .author a {
   color: #333;
   text-decoration: none;
   display: flex;
   align-items: center;
 }
-.products .list .item .author a:hover {
+.products .list .item .bottom .author a:hover {
   opacity: 0.8;
 }
-.products .list .item .author a span {
+.products .list .item .bottom .author a span {
   width: 30px;
   height: 30px;
   background-position: center;
@@ -85,6 +90,9 @@
   border-radius: 100%;
   border: 1px solid #ccc;
   margin-right: 10px;
+}
+.products .list .item .bottom .loved i{
+  margin-right: 5px;
 }
 @media (max-width: 1200px) {
   .products .list .item {

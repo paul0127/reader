@@ -136,11 +136,11 @@ header .top .search ul.search_result > li a.more:hover {
   color: #000;
 }
 header .top .search form button {
-  background-color: #087a7a;
+  background-color: #32aaa8;
   color: #fff;
   padding: 0 10px;
   outline: none;
-  border: 1px solid #087a7a;
+  border: 1px solid #32aaa8;
 }
 header .top .search form button:hover {
   opacity: 0.8;
@@ -195,7 +195,7 @@ header .top ul.head_right li a:hover {
 header .top ul.head_right li:last-child a {
   padding: 5px 12px;
   color: #fff;
-  background-color: #087a7a;
+  background-color: #32aaa8;
   border-radius: 5px;
 }
 
@@ -222,7 +222,7 @@ header .top .head_right .member_name a:hover {
 }
 header .top .head_right button.logout {
   color: rgb(255, 255, 255);
-  background-color: rgb(8, 122, 122);
+  background-color: #32aaa8;
   padding: 5px 12px;
   border: none;
   border-radius: 5px;
@@ -234,7 +234,7 @@ header .top .head_right button.logout:hover {
 }
 
 header .bottom {
-  background-color: #087a7a;
+  background-color: #32aaa8;
 }
 header .bottom .menu_btn {
   display: none;
@@ -496,14 +496,14 @@ ul.bread li a {
   text-decoration: none;
 }
 .pager a.active {
-  background-color: #087a7a;
+  background-color: #32aaa8;
   color: #fff;
 }
 .pager a:last-child {
   margin-right: 0;
 }
 .pager a:hover {
-  background-color: #087a7a;
+  background-color: #32aaa8;
   color: #fff;
 }
 .pager .prev::before {
@@ -978,6 +978,9 @@ footer .foot_info .right ul.menu > li > ul > li > a {
 @media (max-width: 1200px) {
   footer .foot_info {
     flex-wrap: wrap;
+  }
+  footer .foot_info .left{
+    flex: 0 0 100%;
   }
   footer .foot_info .left ul.social {
     margin-bottom: 30px;
