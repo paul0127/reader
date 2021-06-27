@@ -14,7 +14,7 @@
   justify-content: space-between;
   cursor: pointer;
 }
-.member_index .mobile_left_menu.active .selected{
+.member_index .mobile_left_menu.active .selected {
   border-bottom: 1px solid #eee;
 }
 .member_index .mobile_left_menu .selected::after {
@@ -166,9 +166,89 @@
 }
 .member_index .main .right_panel form.account .list a {
   text-decoration: none;
+  cursor: pointer;
 }
 .member_index .main .right_panel form.account .list a:hover {
   color: #333;
+  text-decoration: underline;
+}
+
+/*彈出窗*/
+.member_pop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+.member_pop.active{
+  display: block;
+}
+.member_pop::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  opacity: 0.3;
+}
+.member_pop .con {
+  max-width: 600px;
+  width: calc(100% - 30px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 15px;
+}
+.member_pop .con .close {
+  position: absolute;
+  right: 30px;
+  top: 15px;
+  cursor: pointer;
+}
+.member_pop .con .message {
+  background-color: #fff;
+  width: 100%;
+  min-height: 100px;
+  padding: 3rem;
+  border-radius: 20px;
+}
+.member_pop .con .message .title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.member_pop .con .message .inputs {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.member_pop .con .message .inputs label {
+  flex: 0 0 100%;
+}
+.member_pop .con .message .inputs input {
+  flex: 0 0 100%;
+  border: none;
+  border-bottom: 1px solid #bbb;
+  outline: none;
+}
+.member_pop .con .message .inputs input:focus {
+  border-color: #3f77ca;
+}
+.member_pop .con .message .send {
+  background-color: #f54336;
+  color: #fff;
+  padding: .65rem 0;
+  text-align: center;
+  border-radius: 50px;
+  margin-top: 2rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+.member_pop .con .message .send:hover {
+  opacity: .8;
 }
 
 /*方案選擇框*/
@@ -285,7 +365,7 @@
   background-position: top center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position:center;
+  background-position: center;
   padding-bottom: 150%;
 }
 .member_index .main .right_panel form.download .item .name {
@@ -333,13 +413,13 @@
   padding: 0 15px;
   margin-bottom: 40px;
 }
-.member_index .main .right_panel form.collect .item .del{
+.member_index .main .right_panel form.collect .item .del {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 5px;
 }
-.member_index .main .right_panel form.collect .item .del a{
+.member_index .main .right_panel form.collect .item .del a {
   cursor: pointer;
   width: 30px;
   height: 30px;
@@ -350,8 +430,8 @@
   align-items: center;
   justify-content: center;
 }
-.member_index .main .right_panel form.collect .item .del a:hover{
-  opacity: .8;
+.member_index .main .right_panel form.collect .item .del a:hover {
+  opacity: 0.8;
 }
 .member_index .main .right_panel form.collect .item > a {
   display: block;
@@ -372,7 +452,7 @@
   background-position: top center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position:center;
+  background-position: center;
   padding-bottom: 150%;
 }
 .member_index .main .right_panel form.collect .item .name {
@@ -417,13 +497,13 @@
   margin-bottom: 30px;
   padding: 0 15px;
 }
-.member_index .main .right_panel form.author .item .del{
+.member_index .main .right_panel form.author .item .del {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 5px;
 }
-.member_index .main .right_panel form.author .item .del a{
+.member_index .main .right_panel form.author .item .del a {
   cursor: pointer;
   width: 30px;
   height: 30px;
@@ -434,8 +514,8 @@
   align-items: center;
   justify-content: center;
 }
-.member_index .main .right_panel form.author .item .del a:hover{
-  opacity: .8;
+.member_index .main .right_panel form.author .item .del a:hover {
+  opacity: 0.8;
 }
 .member_index .main .right_panel form.author .item > a {
   display: block;
@@ -458,6 +538,8 @@
   border-radius: 100%;
   background-position: center;
   background-size: cover;
+  background-color: #fff;
+  border: 1px solid #dbd8d6;
 }
 .member_index .main .right_panel form.author .item .name {
   text-align: center;

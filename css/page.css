@@ -1,2 +1,54 @@
 @import url(./common.css);
 
+.result {
+  max-width: 900px;
+  padding: 3rem;
+  margin: 0 auto 3rem auto;
+  text-align: center;
+  border: 1px solid #333;
+  background-color: #ffff;
+}
+.result .date {
+  font-size: 1.25rem;
+  color: #333;
+}
+.result .order {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.result .state {
+  font-size: 1.25rem;
+  color: #333;
+}
+.go_home {
+  display: flex;
+  justify-content: center;
+}
+.go_home a {
+  width: 185px;
+  height: 60px;
+  background-color: #32aaa8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+.go_home a:hover {
+  opacity: 0.8;
+}
+@media (max-width: 1200px) {
+  .result {
+    padding: 1rem;
+  }
+  .result .order {
+    font-size: 1.25rem;
+  }
+  .go_home a {
+      width: 150px;
+      height: 50px;
+      font-size: 1.25rem;
+  }
+}
