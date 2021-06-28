@@ -975,7 +975,7 @@
       $('.recommend_slider').owlCarousel({
         loop: true,
         dots: false,
-        margin: 10,
+        margin: 15,
         autoplay: false,
         autoplayTimeout: 5000,
         autoplayHoverPause: true,
@@ -991,11 +991,12 @@
           },
         },
       })
-
+      
       function counter(event) {
-        var items = event.item.count
-        var item = event.item.index
-        //console.log(event, items, item)
+        let items = event.item.count
+        let item = (event.item.index - 3) < 0 ? 1 : (event.item.index - 3) % items + 1
+        let title = event.target.parentNode.querySelector('.title span')
+        title.innerText = item+' / '+items
       }
     </script>
   </body>

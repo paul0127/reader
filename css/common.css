@@ -33,7 +33,7 @@ header .top .search_btn i {
 }
 header .top .search {
   flex: 1;
-  max-width: 600px;
+  max-width: 500px;
 }
 header .top .search form {
   display: flex;
@@ -76,9 +76,21 @@ header .top .search ul.search_result {
 header .top .search ul.search_result.active {
   transform: scaleY(1);
 }
+header .top .search ul.search_result.loading::before {
+  content: '';
+  display: block;
+  background-image: url(../images/search_loading.gif);
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  margin: 20px auto;
+}
 header .top .search ul.search_result > li {
   padding: 10px 0;
   border-bottom: 1px solid #bbb;
+}
+header .top .search ul.search_result.loading > li {
+  display: none;
 }
 header .top .search ul.search_result > li:last-child {
   border-bottom: none;
@@ -274,7 +286,6 @@ header .bottom ul.nav > li > ul.sub_menu {
   transition-duration: 0.3s;
   background-color: #eee;
   box-shadow: 5px 5px 10px #00000047;
-  padding: 5px 0;
   z-index: 2;
 }
 header .bottom ul.nav > li:hover > ul.sub_menu {
@@ -282,15 +293,16 @@ header .bottom ul.nav > li:hover > ul.sub_menu {
 }
 header .bottom ul.nav > li > ul.sub_menu > li {
   text-align: center;
-  padding: 10px 10px;
 }
 header .bottom ul.nav > li > ul.sub_menu > li > a {
   display: block;
   color: #333;
   text-decoration: none;
+  padding: 10px 10px;
 }
 header .bottom ul.nav > li > ul.sub_menu > li > a:hover {
-  opacity: 0.8;
+  background-color: #32aaa8;
+  color: #fff;
 }
 @media (max-width: 1200px) {
   header {
@@ -494,6 +506,7 @@ ul.bread li a {
   justify-content: center;
   margin-right: 10px;
   text-decoration: none;
+  cursor: pointer;
 }
 .pager a.active {
   background-color: #32aaa8;
@@ -584,7 +597,7 @@ ul.bread li a {
     flex: 0 0 100%;
     margin-left: 0;
   }
-  .right_menu .class_item .title{
+  .right_menu .class_item .title {
     font-size: 1.5rem;
   }
   .right_menu .class_item ul {
@@ -979,7 +992,7 @@ footer .foot_info .right ul.menu > li > ul > li > a {
   footer .foot_info {
     flex-wrap: wrap;
   }
-  footer .foot_info .left{
+  footer .foot_info .left {
     flex: 0 0 100%;
   }
   footer .foot_info .left ul.social {

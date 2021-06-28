@@ -57,9 +57,9 @@
   height: calc(100% - 46px);
 }
 .index_top .index_rank ul li {
-  padding-bottom: 7px;
+  padding-bottom: 5px;
   border-bottom: 1px solid #ccc;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
 }
 .index_top .index_rank ul li:last-child {
   margin-bottom: 0;
@@ -75,6 +75,9 @@
   margin-bottom: 0;
   margin-right: 10px;
 }
+.index_top .index_rank ul li .con{
+  font-size: .95rem;
+}
 .index_top .index_rank ul li .con .name {
   margin-bottom: 5px;
 }
@@ -85,7 +88,7 @@
   word-break: break-all;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 2;
   overflow: hidden;
 }
 .index_top .index_rank ul li .con .name a:hover {
