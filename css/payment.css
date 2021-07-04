@@ -76,10 +76,12 @@
   margin-bottom: 0;
 }
 .payment .payment_info .list label {
-  flex: 0 0 50px;
+  flex: 0 0 80px;
   margin-bottom: 0;
+  margin-right: 10px;
   margin-top: 5px;
   font-weight: 700;
+  text-align: right;
 }
 .payment .payment_info .list input[type='text'] {
   flex: 1;
@@ -92,6 +94,13 @@
 .payment .payment_info .list input[type='text']:focus {
   border-color: #4568b2;
   box-shadow: 0 0 4px #4568b2;
+}
+.payment .payment_info .list select{
+  flex: 1;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 5px;
+  outline: none;
 }
 .payment .payment_info .list .address {
   flex: 1;

@@ -1,130 +1,132 @@
 @import url(./common.css);
 
 .plan_form {
-  flex: 0 0 100%;
+  width: 100%;
 }
-.plan_form ul.tabs {
+.plan_form .top{
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+}
+.plan_form .top ul.tabs {
+  flex: 0 0 200px;
   list-style: none;
   padding-left: 0;
-  margin-bottom: 20px;
+  margin-bottom: 0;
+  margin-right: 20px;
 }
 
-.plan_form ul.tabs li {
+.plan_form .top ul.tabs li {
   flex: 1;
-  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
-.plan_form ul.tabs li:last-child {
-  margin-right: 0;
-}
-.plan_form ul.tabs li input[type='radio'] {
+.plan_form .top ul.tabs li input[type='radio'] {
   display: none;
 }
-.plan_form ul.tabs li label {
+.plan_form .top ul.tabs li label {
   width: 100%;
-  padding: 10px;
+  padding: 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
   text-align: center;
   background-color: #fff;
   text-align: center;
   cursor: pointer;
+  margin-bottom: 0;
 }
-.plan_form ul.tabs li input[type='radio']:checked + label {
+.plan_form .top ul.tabs li input[type='radio']:checked + label {
   background-color: #116f86;
   color: #fff;
   border-color: #116f86;
 }
-.plan_form ul.tabs li:nth-child(2) input[type='radio']:checked + label {
+.plan_form .top ul.tabs li:nth-child(2) input[type='radio']:checked + label {
   background-color: #0c94b3;
   border-color: #0c94b3;
 }
-.plan_form ul.tabs li:nth-child(3) input[type='radio']:checked + label {
+.plan_form .top ul.tabs li:nth-child(3) input[type='radio']:checked + label {
   background-color: #0e988b;
   border-color: #0e988b;
 }
 
 
-.plan_form .panels {
+.plan_form .top .panels {
   margin-bottom: 80px;
+  flex: 1;
 }
-.plan_form .panels .panel {
+.plan_form .top .panels .panel {
   display: none;
   margin-bottom: 20px;
   overflow-x: auto;
 }
-.plan_form .panels .panel.active {
+.plan_form .top .panels .panel.active {
   display: flex;
 }
-.plan_form .panels .panel .item {
+.plan_form .top .panels .panel .item {
   flex: 1;
-  min-width: 250px;
-  padding: 20px 20px;
+  min-width: 150px;
+  padding: 10px;
   border-right: 1px solid #ccc;
   text-align: center;
 }
-.plan_form .panels .panel .item:first-child {
+.plan_form .top .panels .panel .item:first-child {
   border-left: 1px solid #ccc;
 }
 
 /*點數*/
-.plan_form .panels .panel.point .item .title {
+.plan_form .top .panels .panel.point .item .title {
   font-size: 1.25rem;
   line-height: 1;
 }
-.plan_form .panels .panel.point .item .bonus {
+.plan_form .top .panels .panel.point .item .bonus {
   margin-bottom: 10px;
   font-size: 1.25rem;
 }
-.plan_form .panels .panel.point .item .bonus span {
+.plan_form .top .panels .panel.point .item .bonus span {
   display: block;
   font-size: 1.25rem;
   color: #087a7a;
   line-height: 1;
 }
-.plan_form .panels .panel.point .item .point_total {
+.plan_form .top .panels .panel.point .item .point_total {
   font-size: 1.75rem;
   margin-bottom: 10px;
   color: #087a7a;
 }
-.plan_form .panels .panel.point .item .total {
+.plan_form .top .panels .panel.point .item .total {
   text-align: right;
   margin-bottom: 20px;
 }
 
 /*包月 包年方案*/
-.plan_form .panels .panel.month .item .title,
-.plan_form .panels .panel.year .item .title {
+.plan_form .top .panels .panel.month .item .title,
+.plan_form .top .panels .panel.year .item .title {
   font-size: 1.25rem;
   color: #333;
   margin-bottom: 10px;
 }
-.plan_form .panels .panel.month .item .per_month,
-.plan_form .panels .panel.year .item .per_month {
+.plan_form .top .panels .panel.month .item .per_month,
+.plan_form .top .panels .panel.year .item .per_month {
   font-size: 1.75rem;
   margin-bottom: 5px;
   color: #087a7a;
 }
-.plan_form .panels .panel.month .item .total,
-.plan_form .panels .panel.year .item .total {
+.plan_form .top .panels .panel.month .item .total,
+.plan_form .top .panels .panel.year .item .total {
   text-align: right;
   margin-bottom: 10px;
 }
-.plan_form .panels .panel:nth-child(2) .item .point_total,
-.plan_form .panels .panel:nth-child(3) .item .point_total {
+.plan_form .top .panels .panel:nth-child(2) .item .point_total,
+.plan_form .top .panels .panel:nth-child(3) .item .point_total {
   font-size: 1rem;
   margin-bottom: 20px;
   text-align: right;
 }
 
 /*購買按鈕*/
-.plan_form .panels .panel .item .purchase {
+.plan_form .top .panels .panel .item .purchase {
   margin-bottom: 10px;
 }
-.plan_form .panels .panel .item .purchase a {
+.plan_form .top .panels .panel .item .purchase a {
   display: block;
   width: 100%;
   background-color: #116f86;
@@ -134,14 +136,14 @@
   cursor: pointer;
   text-decoration: none;
 }
-.plan_form .panels .panel .item .purchase a:hover {
+.plan_form .top .panels .panel .item .purchase a:hover {
   opacity: 0.8;
 }
 
-.plan_form .panels .panel.month .item .purchase a {
+.plan_form .top .panels .panel.month .item .purchase a {
   background-color: #0c94b3;
 }
-.plan_form .panels .panel.year .item .purchase a {
+.plan_form .top .panels .panel.year .item .purchase a {
   background-color: #0e988b;
 }
 
@@ -221,4 +223,26 @@
 .plan_form .copyright .con ul {
   list-style: decimal;
   padding-left: 20px;
+}
+
+@media (max-width: 1200px) {
+  .plan_form .top{
+    display: block;
+  }
+  .plan_form .top ul.tabs{
+    display: flex;
+    margin-right: 0;
+  }
+  .plan_form .top ul.tabs li{
+    margin-right: 10px;
+  }
+  .plan_form .top ul.tabs li:last-child{
+    margin-right: 0;
+  }
+  .plan_form .top .panels .panel .item {
+    padding: 20px;
+  }
+  .plan_form .top .panels .panel .item{
+    min-width: 250px;
+  }
 }

@@ -246,7 +246,7 @@ header .top .head_right button.logout:hover {
 }
 
 header .bottom {
-  background-color: #32aaa8;
+  background: linear-gradient(to right, #6c9d1f 0%, #32aaa8 100%);
 }
 header .bottom .menu_btn {
   display: none;
@@ -872,8 +872,8 @@ ul.bread li a {
   margin-bottom: 20px;
 }
 .section .desc > ul {
-  list-style: decimal;
-  padding-left: 20px;
+  list-style: simp-chinese-informal;
+  padding-left: 40px;
   margin-bottom: 0;
 }
 .section .desc > ul > li {
@@ -883,10 +883,20 @@ ul.bread li a {
 }
 .section .desc > ul > li > ul {
   padding-left: 20px;
-  list-style: disc;
+  list-style: decimal;
   margin-top: 10px;
 }
 .section .desc > ul > li > ul > li {
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+  line-height: 2;
+}
+.section .desc > ul > li > ul > li > ul {
+  padding-left: 20px;
+  list-style: disc;
+  margin-top: 10px;
+}
+.section .desc > ul > li > ul > li > ul > li {
   margin-bottom: 10px;
   font-size: 1.15rem;
   line-height: 2;

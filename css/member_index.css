@@ -182,7 +182,7 @@
   height: 100vh;
   display: none;
 }
-.member_pop.active{
+.member_pop.active {
   display: block;
 }
 .member_pop::before {
@@ -240,7 +240,7 @@
 .member_pop .con .message .send {
   background-color: #f54336;
   color: #fff;
-  padding: .65rem 0;
+  padding: 0.65rem 0;
   text-align: center;
   border-radius: 50px;
   margin-top: 2rem;
@@ -248,52 +248,131 @@
   cursor: pointer;
 }
 .member_pop .con .message .send:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 
-/*方案選擇框*/
-.member_index .main .right_panel form.plan {
-  display: block;
+/*方案及使用紀錄*/
+.member_index .main .right_panel form.plan .top {
+  margin-bottom: 50px;
 }
-.member_index .main .right_panel form.plan .list {
+.member_index .main .right_panel form.plan .top .selection_name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.member_index .main .right_panel form.plan .top .list {
+  max-width: 500px;
+}
+.member_index .main .right_panel form.plan .top .list .item {
+  padding: 15px;
+  border: 1px solid #333;
   display: flex;
   align-items: center;
-  padding: 8px 10px;
-  border: 1px solid #bbb;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   background-color: #fff;
 }
-.member_index .main .right_panel form.plan .list:last-child {
+.member_index .main .right_panel form.plan .top .list .item:last-child {
   margin-bottom: 0;
 }
-.member_index .main .right_panel form.plan .list label {
-  flex: 1;
-  margin-bottom: 0;
-  cursor: pointer;
-  display: flex;
+.member_index .main .right_panel form.plan .top .list .item .info .name {
   font-size: 1.25rem;
-  margin-right: 10px;
+  font-weight: 500;
+  margin-bottom: 8px;
 }
-.member_index .main .right_panel form.plan .list label span {
-  flex: 0 0 50px;
-  margin-left: auto;
-}
-.member_index .main .right_panel form.plan .send {
+.member_index .main .right_panel form.plan .top .list .item .info .date {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-top: 30px;
+  color: #717171;
 }
-.member_index .main .right_panel form.plan .send button {
-  background-color: #087a7a;
-  color: #fff;
-  border: none;
-  padding: 5px 15px;
+.member_index .main .right_panel form.plan .top .list .item .info .date label {
+  margin-bottom: 0;
+  margin-right: 10px;
+}
+.member_index
+  .main
+  .right_panel
+  form.plan
+  .top
+  .list
+  .item
+  .info
+  .date
+  .start_date::after {
+  content: '-';
+  margin: 0 5px;
+}
+.member_index .main .right_panel form.plan .top .list .item .count {
+  margin-left: auto;
+  text-align: center;
+}
+.member_index .main .right_panel form.plan .top .list .item .count label {
   font-size: 1.25rem;
-  border-radius: 5px;
+  margin-bottom: 8px;
 }
-.member_index .main .right_panel form.plan .send button:hover {
-  opacity: 0.8;
+.member_index .main .right_panel form.plan .top .list .item .count .num {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.member_index .main .right_panel form.plan .bottom .selection_name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.member_index .main .right_panel form.plan .bottom .user_count {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+.member_index .main .right_panel form.plan .bottom .user_count label {
+  margin-bottom: 0;
+}
+.member_index .main .right_panel form.plan .bottom .table {
+  font-size: 1.15rem;
+}
+.member_index .main .right_panel form.plan .bottom .table .thead {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  margin-bottom: 5px;
+}
+.member_index .main .right_panel form.plan .bottom .table .thead .th {
+  flex: 1;
+  padding: 5px;
+}
+.member_index .main .right_panel form.plan .bottom .table .tbody .tr {
+  display: flex;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #333;
+}
+.member_index
+  .main
+  .right_panel
+  form.plan
+  .bottom
+  .table
+  .tbody
+  .tr:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+.member_index .main .right_panel form.plan .bottom .table .tbody .tr .td {
+  flex: 1;
+  padding: 5px;
+}
+.member_index .main .right_panel form.plan .bottom .table .date {
+  flex: 0 0 120px !important;
+}
+.member_index .main .right_panel form.plan .bottom .table .operate {
+  flex: 0 0 130px !important;
+  text-align: center;
+}
+.member_index .main .right_panel form.plan .bottom .table .num {
+  flex: 0 0 130px !important;
+  text-align: center;
 }
 
 /*購買紀錄*/
@@ -337,69 +416,65 @@
 
 /*下載紀錄*/
 .member_index .main .right_panel form.download {
-  display: flex;
-  flex-wrap: wrap;
   margin: 0 -15px;
 }
-.member_index .main .right_panel form.download .item {
-  flex: 0 0 25%;
+.member_index .main .right_panel form.download .info_border {
   padding: 0 15px;
-  margin-bottom: 40px;
 }
-.member_index .main .right_panel form.download .item > a {
-  display: block;
+.member_index .main .right_panel form.download .item {
   margin-bottom: 10px;
-  position: relative;
-}
-.member_index .main .right_panel form.download .item > a:hover::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: #000;
-  opacity: 0.2;
-  width: 100%;
-  height: 100%;
-}
-.member_index .main .right_panel form.download .item > a > .img {
-  background-position: top center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding-bottom: 150%;
-}
-.member_index .main .right_panel form.download .item .name {
+  padding: 15px;
+  border: 1px solid #333;
   display: flex;
-  margin-bottom: 10px;
+  align-items: center;
+  justify-content: space-between;
 }
-.member_index .main .right_panel form.download .item .name a {
+.member_index .main .right_panel form.download .item .left {
+  display: flex;
+  flex: 1;
+  align-items: center;
   margin-right: 10px;
+}
+.member_index .main .right_panel form.download .item .left .date{
+  margin-right: 20px;
+}
+.member_index .main .right_panel form.download .item .left .name {
+  display: flex;
+  margin-right: 10px;
+}
+.member_index .main .right_panel form.download .item .left .name a {
   color: #333;
   text-decoration: none;
 }
-.member_index .main .right_panel form.download .item .name a:hover {
+.member_index .main .right_panel form.download .item .left .name a:hover {
   opacity: 0.8;
 }
-.member_index .main .right_panel form.download .item .name span {
+.member_index .main .right_panel form.download .item .left .name span {
   cursor: pointer;
 }
-.member_index .main .right_panel form.download .item .name span:hover {
+.member_index .main .right_panel form.download .item .left .name span:hover {
   opacity: 0.8;
 }
-.member_index .main .right_panel form.download .item .author {
-  margin-bottom: 10px;
+.member_index .main .right_panel form.download .item .left .author {
+  display: flex;
+  align-items: center;
 }
-.member_index .main .right_panel form.download .item .author a {
+.member_index .main .right_panel form.download .item .left .author::before {
+  content: '-';
+  margin-right: 10px;
+}
+.member_index .main .right_panel form.download .item .left .author a {
   color: #333;
   text-decoration: none;
 }
-.member_index .main .right_panel form.download .item .author a:hover {
+.member_index .main .right_panel form.download .item .left .author a:hover {
   opacity: 0.8;
 }
-@media (max-width: 1200px) {
-  .member_index .main .right_panel form.download .item {
-    flex: 0 0 50%;
-  }
+.member_index .main .right_panel form.download .item span{
+  cursor: pointer;
+}
+.member_index .main .right_panel form.download .item span:hover{
+  opacity: .8;
 }
 
 /*收藏書籍*/
