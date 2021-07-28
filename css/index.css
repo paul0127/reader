@@ -164,6 +164,7 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
+  height: 46px;
 }
 .index_recommend .recommend_item .recommend_slider .item .name a:hover {
   opacity: 0.8;
