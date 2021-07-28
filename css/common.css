@@ -301,7 +301,7 @@ header .bottom ul.nav > li > ul.sub_menu > li > a {
   padding: 10px 10px;
 }
 header .bottom ul.nav > li > ul.sub_menu > li > a:hover {
-  background-color: #32aaa8;
+  background: linear-gradient(to right, #6c9d1f 0%, #32aaa8 100%);
   color: #fff;
 }
 @media (max-width: 1200px) {
@@ -381,7 +381,7 @@ header .bottom ul.nav > li > ul.sub_menu > li > a:hover {
     display: flex;
   }
   header .bottom ul.nav {
-    background-color: #32aaa8;
+    background: linear-gradient(to right, #6c9d1f 0%, #32aaa8 100%);
     position: absolute;
     left: 0;
     top: 100%;
