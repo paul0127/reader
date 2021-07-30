@@ -237,6 +237,46 @@
 .member_pop .con .message .inputs input:focus {
   border-color: #3f77ca;
 }
+.member_pop .con .message .inputs .radios{
+  display: flex;
+  align-items: center;
+}
+.member_pop .con .message .inputs .radios input[type='radio']{
+  display: none;
+}
+.member_pop .con .message .inputs .radios label{
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  cursor: pointer;
+  margin-right: 20px;
+  flex: auto;
+}
+.member_pop .con .message .inputs .radios label span.circle{
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: #fff;
+  border: 2px solid #f54336;
+  position: relative;
+  margin-right: 5px;
+}
+.member_pop .con .message .inputs .radios label span.circle::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-55%,-55%);
+  display: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+  background-color: #f54336;
+}
+.member_pop .con .message .inputs .radios input[type='radio']:checked + label span.circle::before{
+  display: block;
+}
 .member_pop .con .message .send {
   background-color: #f54336;
   color: #fff;
